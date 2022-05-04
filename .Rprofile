@@ -21,3 +21,7 @@ options(
 
 # fix Hugo version
 options(blogdown.hugo.version = "0.98.0")
+options(blogdown.serve_site.startup = FALSE)
+options(blogdown.knit.on_save = TRUE)
+options(blogdown.ext = ".Rmd", blogdown.author = "Anne Kleine",
+        blogdown.subdir = "blog")
