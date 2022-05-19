@@ -17,15 +17,29 @@ images:
   - src: img/main/dayone.png
     alt: Desert Scene
     stretch: stretchH
+weight: 1
 ---
 
 ## Day 1
 
+### Get the slide decks! 
 
-Get the slide deck! 
+Get the slide deck for Day 1 here.
+
+<iframe src="https://giphy.com/embed/wpvnJFDdXsBmdvLxjG" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-episode-1-the-office-tv-wpvnJFDdXsBmdvLxjG">v</a></p>
 
 
-Get the whole slide deck [here]
 ```{r echo = FALSE}
-knitr::include_url('https://anneokk.github.io/RMarkdown_workshop_d1/day_one.html#1') 
+knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1') 
 ```
+
+
+Get the slide deck for Day 2 here.
+
+```{r echo = FALSE}
+knitr::include_url('https://anneokk.netlify.app/slides/day_two.html#1') 
+```
+
+
+<iframe src="https://giphy.com/embed/Gj2iZfSI1rMmQ" width="480" height="470" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Gj2iZfSI1rMmQ"></a></p>
+
