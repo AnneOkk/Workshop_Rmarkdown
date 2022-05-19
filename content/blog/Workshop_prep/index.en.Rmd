@@ -20,7 +20,7 @@ removeBlur: no
 comments: no
 weight: 1
 images:
-  - src: img/main/lukas.jpg
+  - src: img/main/christina-morillo.jpg
     alt: Desert Scene
     stretch: stretchH
 ---

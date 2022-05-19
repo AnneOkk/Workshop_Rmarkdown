@@ -2,7 +2,7 @@
 title: R Markdown Workshop - Slides 
 author: Anne Kleine
 date: '2022-05-19'
-slug: prep
+slug: done
 categories:
   - R Markdown Workshop
   - Day 1
@@ -24,7 +24,7 @@ weight: 1
 
 ### Get the slide decks! 
 
-Get the slide deck for Day 1 here (PLEASE WAIT PATEINTLY!)
+Get the slide deck for Day 1 here (PLEASE WAIT PATIENTLY!)
 
 <iframe src="https://giphy.com/embed/wpvnJFDdXsBmdvLxjG" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-episode-1-the-office-tv-wpvnJFDdXsBmdvLxjG"></a></p>
 

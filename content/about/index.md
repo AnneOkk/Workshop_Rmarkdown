@@ -7,6 +7,4 @@ layout = "about"
 +++
 
 
-This site is still in the making. 
-
-<iframe src="https://giphy.com/embed/FSiHRWT1O8neOv6zmK" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/FSiHRWT1O8neOv6zmK"></a></p>
+Hi, I am Anne. I am an organizational psychologist and a data enthusiast with a strong focus on implementing open science techniques. Interested in data science, open science, or IO pscyhology? Reach out! I enjoy sharing my experiences with interested individuals and learning from each other. 
