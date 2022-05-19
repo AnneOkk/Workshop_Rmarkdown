@@ -4,9 +4,13 @@ author: Anne Kleine
 date: '2022-05-19'
 slug: prep
 categories:
-  - '' 
+  - R Markdown Workshop
+  - Workshop Preparation 
+  - Tools Setup 
 tags:
-  - ''
+  - r markdown
+  - preparation
+  - software 
 # description: ''
 #images:
 #  - alt: ''
@@ -16,7 +20,7 @@ removeBlur: no
 comments: no
 weight: 1
 images:
-  - src: img/main/christina.jpg
+  - src: img/main/lukas.jpg
     alt: Desert Scene
     stretch: stretchH
 ---
@@ -28,6 +32,7 @@ images:
 <p>Please make sure that you have a <a href="https://cran.rstudio.com/">recent R version</a> installed (&gt;= 4.0.0 is recommended).
 You can check your R Version in the Console (in RStudio) by typing:
 <code>R.version.string</code></p>
+<p><img src="images/rvers.png" style="width:40.0%" /></p>
 <p>If you are using an older R version, please install the <a href="https://cran.rstudio.com/">newest R version</a>.</p>
 </div>
 <div id="install-r-studio" class="section level2">
@@ -36,10 +41,10 @@ You can check your R Version in the Console (in RStudio) by typing:
 </div>
 <div id="install-necessary-packages" class="section level2">
 <h2>3) Install necessary packages</h2>
-<p>You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in your R console or terminal:</p>
-<pre class="tpl"><code>cran_packs &lt;- c(&quot;flexdashboard&quot;, &quot;learnr&quot;, &quot;bookdown&quot;,
+<p>You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in R:</p>
+<pre class="tpl"><code>cran_packs &lt;- c(&quot;learnr&quot;, &quot;bookdown&quot;, &quot;stargazer&quot;,
                 &quot;officer&quot;, &quot;rticles&quot;, &quot;webshot&quot;,
-                &quot;tidyverse&quot;, &quot;remotes&quot;, &quot;magick&quot;, &quot;stargazer&quot;,
+                &quot;tidyverse&quot;, &quot;remotes&quot;, &quot;magick&quot;, 
                 &quot;kableExtra&quot;, &quot;vtable&quot;, &quot;devtools&quot;)</code></pre>
 <pre class="tpl"><code>install.packages(cran_packs, dependencies = TRUE)</code></pre>
 <pre class="tpl"><code>github_packs &lt;- c(&#39;rstudio/blogdown&#39;,
@@ -48,6 +53,7 @@ You can check your R Version in the Console (in RStudio) by typing:
 <p>Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:</p>
 <pre class="tpl"><code>blogdown::install_hugo()</code></pre>
 <p>You can check whether the installations were successful by running <code>library(package_name)</code>. All installed packages must be loaded before we can use them during the workshop.</p>
+<p><img src="images/library.png" style="width:40.0%" /></p>
 </div>
 <div id="set-up-git-and-github" class="section level2">
 <h2>4) Set up Git and GitHub</h2>

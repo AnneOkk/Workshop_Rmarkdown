@@ -4,9 +4,13 @@ author: Anne Kleine
 date: '2022-05-19'
 slug: prep
 categories:
-  - '' 
+  - R Markdown Workshop
+  - Workshop Preparation 
+  - Tools Setup 
 tags:
-  - ''
+  - r markdown
+  - preparation
+  - software 
 # description: ''
 #images:
 #  - alt: ''
@@ -16,7 +20,7 @@ removeBlur: no
 comments: no
 weight: 1
 images:
-  - src: img/main/christina.jpg
+  - src: img/main/lukas.jpg
     alt: Desert Scene
     stretch: stretchH
 ---
@@ -28,6 +32,8 @@ Please make sure that you have a [recent R version](https://cran.rstudio.com/) i
 You can check your R Version in the Console (in RStudio) by typing:
 `R.version.string`
 
+![](images/rvers.png){width=40%}
+
 If you are using an older R version, please install the [newest R version](https://cran.rstudio.com/). 
 
 ## 2) Install R Studio 
@@ -37,12 +43,12 @@ Go to the [RStudio website](https://www.rstudio.com/) and download the newest ve
 
 ## 3) Install necessary packages 
 
-You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in your R console or terminal: 
+You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in R:
 
 ```tpl
-cran_packs <- c("flexdashboard", "learnr", "bookdown",
+cran_packs <- c("learnr", "bookdown", "stargazer",
                 "officer", "rticles", "webshot",
-                "tidyverse", "remotes", "magick", "stargazer",
+                "tidyverse", "remotes", "magick", 
                 "kableExtra", "vtable", "devtools")
 ```
 
@@ -67,6 +73,8 @@ blogdown::install_hugo()
 
 You can check whether the installations were successful by running ```library(package_name)```. All installed packages must be loaded before we can use them during the workshop. 
 
+
+![](images/library.png){width=40%}
 
 ## 4) Set up Git and GitHub
 
