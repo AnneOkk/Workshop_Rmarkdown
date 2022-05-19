@@ -8,6 +8,7 @@ tags: []
 weight: 1
 ---
 
+## Day One 
 ```{r}
 slides/day_one.html
 

@@ -1,0 +1,19 @@
+---
+title: Workshop slides
+author: Anne Kleine
+date: '2022-05-19'
+slug: []
+categories:
+  - R Markdown Workshop
+  - Slides Day 1
+tags:
+  - R Markdown
+  - slides
+comments: yes
+description: ''
+images:
+  - alt: ''
+    src: ''
+    stretch: ''
+removeBlur: no
+---

@@ -1,20 +1,22 @@
-+++
-title = "R Markdown Workshop - Preparation"
-description = ""
-tags = [
-    "R Markdown",
-    "workshop preparation",
-]
-date = "2022-05-18"
-categories = [
-    "Workshop",
-    "R Markdown",
-]
-menu = "main"
-+++
+---
+title: R Markdown Workshop - Slides Day 1
+author: Anne Kleine
+date: '2022-05-19'
+slug: prep
+categories:
+  - ''
+tags:
+  - ''
+comments: yes
+description: ''
+images:
+  - alt: ''
+    src: ''
+    stretch: ''
+removeBlur: no
+layout: about
+---
 
-
-**~ 45 minutes**
 
 ## 1) Install R 
 
@@ -22,7 +24,7 @@ Please make sure that you have a [recent R version](https://cran.rstudio.com/) i
 You can check your R Version in the Console (in RStudio) by typing:
 
 
-```R.version.string```
+`R.version.string`
 
 If you are using an older R version, please install the [newest R version](https://cran.rstudio.com/). 
 
@@ -64,7 +66,7 @@ blogdown::install_hugo()
 You can check whether the installations were successful by running ```library(package_name)```. All installed packages must be loaded before we can use them during the workshop. 
 
 
-## Set up Git and GitHub
+## 4) Set up Git and GitHub
 
 
 To make the most out of the workshop, I highly encourage you to install Git and to create a GitHub account for version control. 
@@ -77,18 +79,14 @@ Follow the instructions from the [Happy Git with R Book](https://happygitwithr.c
 
 ### Once this is done, you are all set for the workshop! 🎉
 
-## 4) Sign up on osf
+## 5) Sign up on osf
 
 
 Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf.
 Please [sign up on osf](https://osf.io/) before the workshop. 
 
 
-## 5) Install TeX
+## 6) Install TeX
 
 - Windows: [MikTeX](https://miktex.org/)
 - Mac: [MacTeX](http://www.tug.org/mactex/)
-
-
-
-

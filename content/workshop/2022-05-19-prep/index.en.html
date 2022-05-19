@@ -1,0 +1,71 @@
+---
+title: R Markdown Workshop - Slides Day 1
+author: Anne Kleine
+date: '2022-05-19'
+slug: prep
+categories:
+  - ''
+tags:
+  - ''
+comments: yes
+description: ''
+images:
+  - alt: ''
+    src: ''
+    stretch: ''
+removeBlur: no
+layout: about
+---
+
+
+
+<div id="install-r" class="section level2">
+<h2>1) Install R</h2>
+<p>Please make sure that you have a <a href="https://cran.rstudio.com/">recent R version</a> installed (&gt;= 4.0.0 is recommended).
+You can check your R Version in the Console (in RStudio) by typing:</p>
+<p><code>R.version.string</code></p>
+<p>If you are using an older R version, please install the <a href="https://cran.rstudio.com/">newest R version</a>.</p>
+</div>
+<div id="install-r-studio" class="section level2">
+<h2>2) Install R Studio</h2>
+<p>Go to the <a href="https://www.rstudio.com/">RStudio website</a> and download the newest version if you are using an older version of RStudio (if in doubt, better update!). Simply follow the download instructions. The new version will be available next time you open RStudio.</p>
+</div>
+<div id="install-necessary-packages" class="section level2">
+<h2>3) Install necessary packages</h2>
+<p>You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in your R console or terminal:</p>
+<pre class="tpl"><code>cran_packs &lt;- c(&quot;flexdashboard&quot;, &quot;learnr&quot;, &quot;bookdown&quot;,
+                &quot;officer&quot;, &quot;rticles&quot;, &quot;webshot&quot;,
+                &quot;tidyverse&quot;, &quot;remotes&quot;, &quot;magick&quot;, &quot;stargazer&quot;,
+                &quot;kableExtra&quot;, &quot;vtable&quot;, &quot;devtools&quot;)</code></pre>
+<pre class="tpl"><code>install.packages(cran_packs, dependencies = TRUE)</code></pre>
+<pre class="tpl"><code>github_packs &lt;- c(&#39;rstudio/blogdown&#39;,
+                  &#39;haozhu233/kableExtra&#39;, &#39;crsh/papaja&#39;)</code></pre>
+<pre class="tpl"><code>remotes::install_github(github_packs, dependencies = TRUE)</code></pre>
+<p>Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:</p>
+<pre class="tpl"><code>blogdown::install_hugo()</code></pre>
+<p>You can check whether the installations were successful by running <code>library(package_name)</code>. All installed packages must be loaded before we can use them during the workshop.</p>
+</div>
+<div id="set-up-git-and-github" class="section level2">
+<h2>4) Set up Git and GitHub</h2>
+<p>To make the most out of the workshop, I highly encourage you to install Git and to create a GitHub account for version control.
+Follow the instructions from the <a href="https://happygitwithr.com/">Happy Git with R Book</a> and the official <a href="https://docs.github.com/en/get-started/quickstart/set-up-git">GitHub guides</a>:</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://happygitwithr.com/github-acct.html">Register a GitHub account</a></p></li>
+<li><p><a href="https://docs.github.com/en/get-started/quickstart/set-up-git">Install Git</a>. Follow the instructions under <strong>Setting up Git</strong> (do not use the Desktop client). For <strong>Windows Users</strong>: Follow the installation instructions for Git <a href="https://www.computerhope.com/issues/ch001927.htm">here</a>.</p></li>
+</ol>
+<div id="once-this-is-done-you-are-all-set-for-the-workshop" class="section level3">
+<h3>Once this is done, you are all set for the workshop! 🎉</h3>
+</div>
+</div>
+<div id="sign-up-on-osf" class="section level2">
+<h2>5) Sign up on osf</h2>
+<p>Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf.
+Please <a href="https://osf.io/">sign up on osf</a> before the workshop.</p>
+</div>
+<div id="install-tex" class="section level2">
+<h2>6) Install TeX</h2>
+<ul>
+<li>Windows: <a href="https://miktex.org/">MikTeX</a></li>
+<li>Mac: <a href="http://www.tug.org/mactex/">MacTeX</a></li>
+</ul>
+</div>

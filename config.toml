@@ -128,8 +128,12 @@ disableLanguages        = []
     pre               = "<i class='far fa-envelope'></i>"
     weight            = 6
 
-
-
+  [[menu.main]]
+    name              = "R Markdown Workshop"
+    identifier        = "workshop"
+    url               = "workshop"
+    pre               = "<i class='fab fa-fort-awesome'></i>"
+    weight            = 6
 
 
 [social]
