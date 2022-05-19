@@ -1,20 +1,24 @@
 ---
-title: R Markdown Workshop - Slides Day 1
+title: R Markdown Workshop - Preparation
 author: Anne Kleine
 date: '2022-05-19'
 slug: prep
 categories:
-  - ''
+  - '' 
 tags:
   - ''
-comments: yes
-description: ''
-images:
-  - alt: ''
-    src: ''
-    stretch: ''
+# description: ''
+#images:
+#  - alt: ''
+#    src: "images/pexels-christina-morillo-1181253.jpg"
+#    stretch: ''
 removeBlur: no
-layout: about
+comments: no
+weight: 1
+images:
+  - src: img/main/christina.jpg
+    alt: Desert Scene
+    stretch: stretchH
 ---
 
 
@@ -22,8 +26,6 @@ layout: about
 
 Please make sure that you have a [recent R version](https://cran.rstudio.com/) installed (>= 4.0.0 is recommended). 
 You can check your R Version in the Console (in RStudio) by typing:
-
-
 `R.version.string`
 
 If you are using an older R version, please install the [newest R version](https://cran.rstudio.com/). 

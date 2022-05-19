@@ -114,26 +114,18 @@ disableLanguages        = []
     weight            = 2
 
   [[menu.main]]
-    name              = "Blog"
-    identifier        = "blog"
-    url               = "blog"
-    pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
-
-
-  [[menu.main]]
     name              = "Contact"
     identifier        = "contact"
     url               = "contact"
     pre               = "<i class='far fa-envelope'></i>"
     weight            = 6
-
+    
   [[menu.main]]
     name              = "R Markdown Workshop"
-    identifier        = "workshop"
-    url               = "workshop"
+    identifier        = "blog"
+    url               = "blog"
     pre               = "<i class='fab fa-fort-awesome'></i>"
-    weight            = 6
+    weight            = 3
 
 
 [social]

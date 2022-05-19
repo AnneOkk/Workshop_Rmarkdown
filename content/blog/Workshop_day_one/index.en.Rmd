@@ -1,0 +1,27 @@
+---
+title: R Markdown Workshop - Slides Day 1
+author: Anne Kleine
+date: '2022-05-19'
+slug: prep
+categories:
+  - R Markdown Workshop
+  - Day 1
+tags:
+  - r markdown 
+  - workshop 
+  - material
+comments: no
+# description: ''
+#images:
+#  - alt: ''
+#    src: "images/pexels-christina-morillo-1181253.jpg"
+#    stretch: ''
+removeBlur: no
+
+---
+
+```{r}
+knitr::include_url('https://timmastny.rbind.io/slides/first_presentation#1') 
+```
+
+

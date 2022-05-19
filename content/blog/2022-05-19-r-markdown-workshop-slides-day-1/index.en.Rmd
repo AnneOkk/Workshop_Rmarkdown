@@ -1,0 +1,16 @@
++++
+title = "Emoji Support"
+description = "Guide d'utilisation des emoji dans Hugo"
+author = "Hugo Auteurs"
+date = "2019-03-05"
+tags = ["emoji"]
+[[images]]
+  src = "images/dayone.png"
+  alt = "Desert Scene"
+  stretch = "stretchH"
++++
+---
+
+```{r}
+knitr::include_url('https://timmastny.rbind.io/slides/first_presentation#1')
+```
