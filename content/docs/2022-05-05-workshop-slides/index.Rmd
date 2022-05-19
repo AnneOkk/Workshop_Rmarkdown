@@ -1,0 +1,21 @@
+---
+title: Workshop Slides
+author: Anne Kleine
+date: '2022-05-05'
+slug: workshop-slides
+categories: []
+tags: []
+weight: 1
+---
+
+```{r}
+slides/day_one.html
+
+knitr::include_url('https://timmastny.rbind.io/slides/first_presentation#1')
+```
+
+```{r}
+slides/day_one.html
+```
+
+slides/day_one.html

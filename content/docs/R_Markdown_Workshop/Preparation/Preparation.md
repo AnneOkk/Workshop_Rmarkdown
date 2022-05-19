@@ -44,7 +44,8 @@ You need several R packages for the workshop. Please make sure to install these 
 ```tpl
 cran_packs <- c("flexdashboard", "learnr", "bookdown",
                 "officer", "rticles", "webshot",
-                "tidyverse", "remotes", "magick")
+                "tidyverse", "remotes", "magick", "stargazer",
+                "kableExtra", "vtable", "devtools")
 ```
 
 ```tpl
@@ -53,7 +54,7 @@ install.packages(cran_packs, dependencies = TRUE)
 
 ```tpl
 github_packs <- c('rstudio/blogdown',
-                  'haozhu233/kableExtra')
+                  'haozhu233/kableExtra', "crsh/papaja")
 ```
 
 ```tpl
@@ -82,9 +83,9 @@ Follow the instructions from the [Happy Git with R Book](https://happygitwithr.c
 
 1. [Register a GitHub account](https://happygitwithr.com/github-acct.html)
 
-2. [Install Git](https://docs.github.com/en/get-started/quickstart/set-up-git). Follow the instructions under **Setting up Git** (do not use the Desktop client).
+2. [Install Git](https://docs.github.com/en/get-started/quickstart/set-up-git). Follow the instructions under **Setting up Git** (do not use the Desktop client). For **Windows Users**: Follow the installation instructions for Git [here](https://www.computerhope.com/issues/ch001927.htm)
 
-Once this is done, you are all set for the workshop! We will not delve into all the possibilities offered by Git and GitHub, but we will learn how to fork a repository to use someone else's project as a starting point for your own idea. 
+Once this is done, you are all set for the workshop! 🎉
 
 
 {{< /tab >}}
@@ -97,6 +98,21 @@ Once this is done, you are all set for the workshop! We will not delve into all 
 
 Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf, so you no longer have to take care of multiple online repositories. 
 Please [sign up on osf](https://osf.io/) before the workshop. 
+
+
+{{< /tab >}}
+
+
+{{< tab "tex" >}}
+
+# Install TeX
+
+**~ 10 minutes**
+
+- Windows: [MikTeX](https://miktex.org/)
+- Mac: [MacTeX](http://www.tug.org/mactex/)
+
+Note: Be sure to restart RStudio after installing TeX to make sure RStudio knows it’s there (now).
 
 
 {{< /tab >}}
