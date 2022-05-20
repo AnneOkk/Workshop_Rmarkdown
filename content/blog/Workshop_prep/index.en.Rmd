@@ -5,8 +5,6 @@ date: '2022-05-19'
 slug: prep
 categories:
   - R Markdown Workshop
-  - Workshop Preparation 
-  - Tools Setup 
 tags:
   - r markdown
   - preparation
