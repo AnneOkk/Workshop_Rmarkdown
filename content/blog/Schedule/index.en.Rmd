@@ -1,0 +1,52 @@
+---
+title: Schedule 
+author: ''
+date: "`r Sys.Date()`"
+slug: sched
+toc: yes
+type: docs
+categories:
+  - R Markdown Workshop
+  - Schedule
+tags:
+  - r markdown 
+  - workshop 
+  - schedule
+images:
+  - src: img/main/schedule.jpg
+    alt: Desert Scene
+    stretch: stretchH
+weight: 1
+---
+
+## 🗓️ Dates: 
+
+24th & 25th May 2022
+
+
+## 🕛 Tentative timetable for Day 1:
+
+| Unit          | When          | What   |
+|---------------|---------------|--------|
+|                | 09:00-09:30   |🖐 WALK-IN and final installation support|
+| Session #1  | 09:30-10:15   |**Introduction to R Markdown**|
+|               | 10:15-10:30 |🍵 BREAK   |
+| Session #2  | 10:30-11:15 |**R Markdown - Text, code, reference management**|
+|               | 11:15-11:30 |🍵 BREAK   |
+| Session #3  | 11:30-13:00   |**R Markdown - extended options and project organisation** |
+|               | 13:00-13:40  |🍔 LUNCH BREAK |
+| Session #4  | 13:40-15:00   |**R Markdown - building your own project** |
+
+
+## 🕛 Tentative timetable for Day 2:
+
+| Unit          | When          | What   |
+|---------------|---------------|--------|
+|                | 09:00-09:30   |❓ Q & A|
+| Session #1  | 09:30-10:15   |**Version control with Git & GitHub - the basics**|
+|               | 10:15-10:30 |🍵 BREAK   |
+| Session #2  | 10:30-11:15 |**Version control with Git & GitHub - collaborating **|
+|               | 11:15-11:30 |🍵 BREAK   |
+| Session #3  | 11:30-13:00   |**Blogdown - build your own project websites** |
+|               | 13:00-13:40  |🍔 LUNCH BREAK |
+| Session #4  | 13:40-15:00   |**Other R (Markdown) tools, final Q & A** |
