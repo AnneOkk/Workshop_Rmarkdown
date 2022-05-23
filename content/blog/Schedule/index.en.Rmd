@@ -45,7 +45,7 @@ comments: no
 |                | 09:00-09:30   |❓ Q & A|
 | Session #1  | 09:30-10:15   |**Version control with Git & GitHub - the basics**|
 |               | 10:15-10:30 |🍵 BREAK   |
-| Session #2  | 10:30-11:15 |**Version control with Git & GitHub - collaborating **|
+| Session #2  | 10:30-11:15 |**Version control with Git & GitHub - collaborating; Integration with osf**|
 |               | 11:15-11:30 |🍵 BREAK   |
 | Session #3  | 11:30-13:00   |**Blogdown - build your own project websites** |
 |               | 13:00-13:40  |🍔 LUNCH BREAK |

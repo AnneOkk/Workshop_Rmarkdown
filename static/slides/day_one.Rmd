@@ -154,6 +154,7 @@ knitr::knit_hooks$set(source = function(x, options) {
 <!-- this adds the link footer to all slides, depends on my-footer class in css-->
 
 ---
+
 class: middle, inverse
 
 ## .fat[...taking the pain away]
@@ -189,25 +190,25 @@ class: middle, inverse
 ]
 
 ---
+
 class: middle, inverse
 
 ## .fancy[Day 2:]
 
-#### Collaboration and version control using Git and GitGub
+.pull-left[
+#### 1. Git & GitHub basics
+#### 2. Collaborating using Git & GitHub 
+#### 3. Blogdown - build your project website 
+#### 4. xaringan, bookdown & Co
+]
+--
+.pull-right[
 
-  * .fancy[GOAL 4] 💪 Create publishable data analysis folder and push your code and output to GitHub
-
-    
-#### Use **Blogdown** for creating your own websites/ blogs to host analyses outputs (or for other use) 
-
-  * .fancy[GOAL 5] 💪 Build your own website using blogdown
-
-
-#### GitHub on osf integration
-
-  * .fancy[GOAL 6] 💪 Crate an anonymous project site on osf using your GitHub repositories 
-
-#### Optional: Introduction to shiny apps
+#### .fancy[GOAL 1] 💪 Learn how to use Git & GitHub for version control 
+#### .fancy[GOAL 2] 💪 Learn how to collaborate using Git & GitHub 
+#### .fancy[GOAL 3] 💪 Build your own data analysis project website   
+#### .fancy[GOAL 4] 💪 Learn how to use R & Markdown to produce a multitude of outputs (books, presentations, interactive applications)
+]
 
 ---
 
@@ -216,36 +217,34 @@ class: middle, inverse
 # .fancy[General organization:]
 
 #### Presentation, then practice
-#### You will work in pairs of 2 
+#### You will work in breakout rooms, groups of 3 to 4
 
 <br /> 
 
 ### ❓❔Questions❓❔
-#### 1. Ask you buddy 🙆
-#### 2. Google (together) 👨‍💻👩‍💻
+#### 1. Ask you group 🙆
+#### 2. Google (together) 👨‍💻👩‍💻👩‍💻
 #### 3. Ask me 👷‍
 
 ---
-
-
 class: middle, inverse
 
 <img class="circle" src="img/walking.jpeg" width="200px"/>
 
 # Find me at...
 
+[Web](https://anneokk.netlify.app/)  
 [LinkedIn](https://linkedin.com/in/anne-kathrin-kleine)  
 [GitHub](https://github.com/AnneOkk)  
 [AnneKathrinKleine.com](https://AnneKathrinKleine.com)  
 [a.k.kleine@rug.nl](mailto:alison@rstudio.com)
-
 
 ---
 
 class: right, inverse
 
 
-# .fancy[Or find me ...]
+# Or find me ...
 
 .left2[
 
@@ -271,7 +270,7 @@ class: middle, inverse
 
 ## .fat[.fancy[How familiar are you with using R for data analysis?]] 
 
-### Go to [www.menti.com](www.menti.com) 🤸 and enter the code **9794 5699** 
+### Go to [menti.com](https://www.menti.com/) 🤸 and enter the code **6959 8626** 
 
 ### [See results](https://www.mentimeter.com/app/presentation/22b3d8f42894408a6a6c001e1eae6a88/2be87e2a1316)
 
@@ -280,11 +279,75 @@ class: middle, inverse
 
 class: middle, inverse
 
-## .fat[.fancy[Helpful resources (I used to create these slides):]] 
+## .fat[.fancy[Helpful resources (...that helped me creating these slides):]] 
 
 ### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
 ### [Advanced R Markdown Workshop R Conf 2019](https://arm.rbind.io/)
 ### [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+
+class: middle, inverse
+
+
+```{r, echo=FALSE}
+require("magrittr")
+
+file_name <- rstudioapi::getSourceEditorContext()[["path"]]
+
+doc <- toc <- readLines(file_name)
+tocc <- character()
+for (i in 1:length(toc)) {
+  if(substr(toc[i][1], 1, 2) == "# ") {
+    toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
+      gsub(".fancy", "", ., fixed = TRUE) %>% 
+      gsub("[", "", ., fixed = TRUE) %>% 
+      gsub("]", "", ., fixed = TRUE) %>% 
+      gsub(".fat", "", ., fixed = TRUE) %>% 
+      gsub(":", "", ., fixed = TRUE) %>% 
+      gsub("<br>", "", ., fixed = TRUE) %>% 
+      gsub(".salt", "", ., fixed = TRUE) %>% 
+      gsub("#", "", ., fixed = TRUE)
+    tocc <- append(tocc, toc[i])
+  }
+}
+
+tocc <- paste("- ", tocc[-1:-5])
+
+row_outline <- which(doc == "# Detailed Outline")
+row_body <- which(doc == "---")
+row_body <- row_body[which(row_body > row_outline)][1]
+
+doc <- c(doc[1:row_outline], "\n", tocc, "\n", doc[(row_body):length(doc)])
+
+
+writeLines(doc, file_name)
+
+```
+
+# Detailed Outline
+
+
+-  Did you do the  setup?
+-  Creating an R project🐣
+-  The YAML header
+-  Writing text 📝
+-  Introduction
+-  Reference management
+-  Code
+-  chunk option defaults
+-  packages
+-  Figures
+-  Plots - ggplot2
+-  Tables
+-  Structure your project
+-  chunk option defaults
+-  packages
+-  custom functions
+-  🎉 Yey, you're all set! 🎉 
+-  Your turn! 🤹
+
+
 ---
 
 class: middle, inverse
@@ -294,9 +357,16 @@ class: middle, inverse
 .large[[Link to setup](https://anneokk.netlify.app/docs/r_markdown_workshop/preparation/preparation/)]
 
 ---
+
 class: middle, inverse
 
-### .fat[.fancy[R Markdown - an intro]]
+# .fat[.fancy[Creating an R project]]🐣
+
+---
+
+class: middle, inverse
+
+### .fat[.fancy[Creating an R project]]
 
 ### Create a new R Project from within R Studio
 
@@ -581,13 +651,13 @@ csl: "../../paperstyle/csl/apa.csl" # two dots (..) mean moving one folder up
 - ❕❗locations of files  re specified as .blue-h[relative to the working directory]❕❗
     
 - for reproducibility reasons, hard-coded stings should be avoided 🙏
-  -  e.g., `"C:/Users/Dropbox/styles/apa.csl"` 👎️
+  -  e.g., 👎 `"C:/Users/Dropbox/styles/apa.csl"` 👎️
 
 ---
 
 class: middle, inverse
 
-# .fat[.fancy[Writing text]]
+# .fat[.fancy[Writing text]] 📝
 
 ---
 class: middle, inverse
@@ -675,7 +745,7 @@ class: middle, inverse
 
 ## .fancy[Paragraphs]
 
-One or more<sup>*</sup> blank lines introduce a new paragraph
+One or more blank lines introduce a new paragraph
 
 ```{r eval=FALSE}
 This is the first sentence of a paragraph as it is preceded by a blank line. This is the second 
@@ -693,11 +763,6 @@ This is the first sentence of a *new paragraph* as it is preceded by a blank lin
 
 ]
 
-.footnote[
-
-<sup>*</sup> Multiple blank lines between paragraphs reduce to one.
-
-]
 
 ---
 class: middle, inverse
@@ -820,11 +885,11 @@ class: middle, inverse
 
 You can link text to URLs
 
-<span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;visit my website](https&#58;//https:/annekathrinkleine.com/)</span> becomes .out-t[[visit my website](https://annekathrinkleine.com/)]
+<span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;visit my website](https&#58;//anneokk.netlify.app//)</span> becomes .out-t[[visit my website](https://anneokk.netlify.app/)]
 
 You can also link text to an email address
 
-<span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;a.k.kleine@rug.nl)</span><sup>*</sup> becomes .out-t[[email me](mailto:a.k.kleine@rug.nl)]
+<span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;a.k.kleine@rug.nl)</span> becomes .out-t[[email me](mailto:a.k.kleine@rug.nl)]
 
 <span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;a.k.kleine@rug.nl&#62;</span> becomes .out-t[<a.k.kleine@rug.nl>]
 
@@ -841,9 +906,9 @@ Inline equations go between a pair of single dollar signs "$" with no space betw
 <br>
 
 
-Block equations go in between a pair of double dollar signs &mdash; with or without spaces, it works
+Block equations go in between a pair of double dollar signs 
 
-.inline-c[&#x24;&#x24;  E = mc^{2}].inline-c[&#x24;&#x24;] becomes
+.inline-c[&#x24;&#x24;E = mc^{2}].inline-c[&#x24;&#x24;] becomes
 
 
 .out-t[
@@ -1024,7 +1089,7 @@ class: middle, inverse
 --
 
 ### Better options: [Zotero](https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/#:~:text=In%20Zotero%20follow%20this%20path,and%20follow%20the%20system%20setup.), [Mendeley](https://rosannavanhespen.nl/rmarkdown/writing-your-thesis-with-r-markdown-2-text-citations-and-equations/#:~:text=Open%20Mendeley%20and%20select%20Mendeley,your%20R%20Markdown%20document%20lives.)
-#### [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/)
+#### ⭐ [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/) ⭐
 
 ---
 class: middle, inverse
@@ -1790,7 +1855,7 @@ knitr::include_graphics("img/cookie.png")
 ---
 class: middle, inverse
 
-## .fat[.fancy[Next level stuff: 🎁 R packages 🎁]]
+## .fat[.fancy[Next level stuff: R packages 🎁]]
 
 ### Building R packages is beyond the scope of the workshop but definitely useful to get into. See [R Packages Book](https://r-pkgs.org/) for more information. 
 
@@ -1861,12 +1926,9 @@ class: middle, inverse
 
 1. Use `cookiecutter` to create a project from scratch or use a project template that serves the purpose, e.g., [The Example Project](https://github.com/AnneOkk/example_project)
 2. Create an R Markdown template that you would like to use (e.g., APA7 paper with `papaja` package) 
-3. If you already have an analysis script, move the files into the correct folders (e.g., raw data into `data/raw` subfolder, R functions into `R` folder) ❕❗__Do not forget to refer to the files using relative paths__ ❕❗ 
+3. If you already have an analysis script, move the files into the correct folders (e.g., raw data into `data/raw` subfolder, custom R functions into `R` folder) ❕❗__Do not forget to refer to the files using relative paths__ ❕❗ 
 4. 🧶 KNIT to html or pdf
 
-<br /> 
-[OPTIONAL] Add custom style (`.csl`) and bibliography (`.bib`) files and use references in the text  
-[OPTIONAL] Add custom styling (e.g., a table of contents); improve the looks of your figures and tables
  
 
 

@@ -133,6 +133,7 @@ background-size: cover
 &lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
 
 ---
+
 class: middle, inverse
 
 ## .fat[...taking the pain away]
@@ -168,25 +169,25 @@ class: middle, inverse
 ]
 
 ---
+
 class: middle, inverse
 
 ## .fancy[Day 2:]
 
-#### Collaboration and version control using Git and GitGub
+.pull-left[
+#### 1. Git &amp; GitHub basics
+#### 2. Collaborating using Git &amp; GitHub 
+#### 3. Blogdown - build your project website 
+#### 4. xaringan, bookdown &amp; Co
+]
+--
+.pull-right[
 
-  * .fancy[GOAL 4] 💪 Create publishable data analysis folder and push your code and output to GitHub
-
-    
-#### Use **Blogdown** for creating your own websites/ blogs to host analyses outputs (or for other use) 
-
-  * .fancy[GOAL 5] 💪 Build your own website using blogdown
-
-
-#### GitHub on osf integration
-
-  * .fancy[GOAL 6] 💪 Crate an anonymous project site on osf using your GitHub repositories 
-
-#### Optional: Introduction to shiny apps
+#### .fancy[GOAL 1] 💪 Learn how to use Git &amp; GitHub for version control 
+#### .fancy[GOAL 2] 💪 Learn how to collaborate using Git &amp; GitHub 
+#### .fancy[GOAL 3] 💪 Build your own data analysis project website   
+#### .fancy[GOAL 4] 💪 Learn how to use R &amp; Markdown to produce a multitude of outputs (books, presentations, interactive applications)
+]
 
 ---
 
@@ -195,36 +196,34 @@ class: middle, inverse
 # .fancy[General organization:]
 
 #### Presentation, then practice
-#### You will work in pairs of 2 
+#### You will work in breakout rooms, groups of 3 to 4
 
 &lt;br /&gt; 
 
 ### ❓❔Questions❓❔
-#### 1. Ask you buddy 🙆
-#### 2. Google (together) 👨‍💻👩‍💻
+#### 1. Ask you group 🙆
+#### 2. Google (together) 👨‍💻👩‍💻👩‍💻
 #### 3. Ask me 👷‍
 
 ---
-
-
 class: middle, inverse
 
 &lt;img class="circle" src="img/walking.jpeg" width="200px"/&gt;
 
 # Find me at...
 
+[Web](https://anneokk.netlify.app/)  
 [LinkedIn](https://linkedin.com/in/anne-kathrin-kleine)  
 [GitHub](https://github.com/AnneOkk)  
 [AnneKathrinKleine.com](https://AnneKathrinKleine.com)  
 [a.k.kleine@rug.nl](mailto:alison@rstudio.com)
-
 
 ---
 
 class: right, inverse
 
 
-# .fancy[Or find me ...]
+# Or find me ...
 
 .left2[
 
@@ -250,7 +249,7 @@ class: middle, inverse
 
 ## .fat[.fancy[How familiar are you with using R for data analysis?]] 
 
-### Go to [www.menti.com](www.menti.com) 🤸 and enter the code **9794 5699** 
+### Go to [menti.com](https://www.menti.com/) 🤸 and enter the code **6959 8626** 
 
 ### [See results](https://www.mentimeter.com/app/presentation/22b3d8f42894408a6a6c001e1eae6a88/2be87e2a1316)
 
@@ -259,11 +258,42 @@ class: middle, inverse
 
 class: middle, inverse
 
-## .fat[.fancy[Helpful resources (I used to create these slides):]] 
+## .fat[.fancy[Helpful resources (...that helped me creating these slides):]] 
 
 ### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
 ### [Advanced R Markdown Workshop R Conf 2019](https://arm.rbind.io/)
 ### [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+---
+
+class: middle, inverse
+
+
+
+
+# Detailed Outline
+
+
+-  Did you do the  setup?
+-  Creating an R project🐣
+-  The YAML header
+-  Writing text 📝
+-  Introduction
+-  Reference management
+-  Code
+-  chunk option defaults
+-  packages
+-  Figures
+-  Plots - ggplot2
+-  Tables
+-  Structure your project
+-  chunk option defaults
+-  packages
+-  custom functions
+-  🎉 Yey, you're all set! 🎉 
+-  Your turn! 🤹
+
+
 ---
 
 class: middle, inverse
@@ -273,9 +303,16 @@ class: middle, inverse
 .large[[Link to setup](https://anneokk.netlify.app/docs/r_markdown_workshop/preparation/preparation/)]
 
 ---
+
 class: middle, inverse
 
-### .fat[.fancy[R Markdown - an intro]]
+# .fat[.fancy[Creating an R project]]🐣
+
+---
+
+class: middle, inverse
+
+### .fat[.fancy[Creating an R project]]
 
 ### Create a new R Project from within R Studio
 
@@ -572,13 +609,13 @@ csl: "../../paperstyle/csl/apa.csl" # two dots (..) mean moving one folder up
 - ❕❗locations of files  re specified as .blue-h[relative to the working directory]❕❗
     
 - for reproducibility reasons, hard-coded stings should be avoided 🙏
-  -  e.g., `"C:/Users/Dropbox/styles/apa.csl"` 👎️
+  -  e.g., 👎 `"C:/Users/Dropbox/styles/apa.csl"` 👎️
 
 ---
 
 class: middle, inverse
 
-# .fat[.fancy[Writing text]]
+# .fat[.fancy[Writing text]] 📝
 
 ---
 class: middle, inverse
@@ -671,7 +708,7 @@ class: middle, inverse
 
 ## .fancy[Paragraphs]
 
-One or more&lt;sup&gt;*&lt;/sup&gt; blank lines introduce a new paragraph
+One or more blank lines introduce a new paragraph
 
 
 ```r
@@ -690,11 +727,6 @@ This is the first sentence of a *new paragraph* as it is preceded by a blank lin
 
 ]
 
-.footnote[
-
-&lt;sup&gt;*&lt;/sup&gt; Multiple blank lines between paragraphs reduce to one.
-
-]
 
 ---
 class: middle, inverse
@@ -817,11 +849,11 @@ class: middle, inverse
 
 You can link text to URLs
 
-&lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;&amp;#91;visit my website](https&amp;#58;//https:/annekathrinkleine.com/)&lt;/span&gt; becomes .out-t[[visit my website](https://annekathrinkleine.com/)]
+&lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;&amp;#91;visit my website](https&amp;#58;//anneokk.netlify.app//)&lt;/span&gt; becomes .out-t[[visit my website](https://anneokk.netlify.app/)]
 
 You can also link text to an email address
 
-&lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;&amp;#91;email me](mailto&amp;#58;a.k.kleine@rug.nl)&lt;/span&gt;&lt;sup&gt;*&lt;/sup&gt; becomes .out-t[[email me](mailto:a.k.kleine@rug.nl)]
+&lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;&amp;#91;email me](mailto&amp;#58;a.k.kleine@rug.nl)&lt;/span&gt; becomes .out-t[[email me](mailto:a.k.kleine@rug.nl)]
 
 &lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;&amp;#60;a.k.kleine@rug.nl&amp;#62;&lt;/span&gt; becomes .out-t[&lt;a.k.kleine@rug.nl&gt;]
 
@@ -838,9 +870,9 @@ Inline equations go between a pair of single dollar signs "$" with no space betw
 &lt;br&gt;
 
 
-Block equations go in between a pair of double dollar signs &amp;mdash; with or without spaces, it works
+Block equations go in between a pair of double dollar signs 
 
-.inline-c[&amp;#x24;&amp;#x24;  E = mc^{2}].inline-c[&amp;#x24;&amp;#x24;] becomes
+.inline-c[&amp;#x24;&amp;#x24;E = mc^{2}].inline-c[&amp;#x24;&amp;#x24;] becomes
 
 
 .out-t[
@@ -1025,7 +1057,7 @@ class: middle, inverse
 --
 
 ### Better options: [Zotero](https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/#:~:text=In%20Zotero%20follow%20this%20path,and%20follow%20the%20system%20setup.), [Mendeley](https://rosannavanhespen.nl/rmarkdown/writing-your-thesis-with-r-markdown-2-text-citations-and-equations/#:~:text=Open%20Mendeley%20and%20select%20Mendeley,your%20R%20Markdown%20document%20lives.)
-#### [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/)
+#### ⭐ [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/) ⭐
 
 ---
 class: middle, inverse
@@ -1188,16 +1220,15 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name          Water_allergy `Eye color` Race     `Hair color` Height Publisher
-##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;    
-## 1 A-Bomb        Yes           yellow      Human    No Hair         203 Marvel C…
-## 2 Abe Sapien    Yes           blue        Icthyo … No Hair         191 Dark Hor…
-## 3 Abin Sur      Yes           blue        Ungaran  No Hair         185 DC Comics
-## 4 Abomination   Yes           green       Human /… No Hair         203 Marvel C…
-## 5 Abraxas       Yes           blue        Cosmic … Black            NA Marvel C…
-## 6 Absorbing Man Yes           blue        Human    No Hair         193 Marvel C…
-## # … with 4 more variables: `Skin color` &lt;chr&gt;, Alignment &lt;chr&gt;, Weight &lt;dbl&gt;,
-## #   bmi &lt;dbl&gt;
+##   name        Water_allergy `Eye color` Race  `Hair color` Height Publisher `Skin color`
+##   &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;       
+## 1 A-Bomb      Yes           yellow      Human No Hair         203 Marvel C… -           
+## 2 Abe Sapien  Yes           blue        Icth… No Hair         191 Dark Hor… blue        
+## 3 Abin Sur    Yes           blue        Unga… No Hair         185 DC Comics red         
+## 4 Abomination Yes           green       Huma… No Hair         203 Marvel C… -           
+## 5 Abraxas     Yes           blue        Cosm… Black            NA Marvel C… -           
+## 6 Absorbing … Yes           blue        Human No Hair         193 Marvel C… -           
+## # … with 3 more variables: Alignment &lt;chr&gt;, Weight &lt;dbl&gt;, bmi &lt;dbl&gt;
 ```
 
 ---
@@ -1219,16 +1250,15 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name          Water_allergy `Eye color` Race     `Hair color` Height Publisher
-##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;    
-## 1 A-Bomb        Yes           yellow      Human    No Hair         203 Marvel C…
-## 2 Abe Sapien    Yes           blue        Icthyo … No Hair         191 Dark Hor…
-## 3 Abin Sur      Yes           blue        Ungaran  No Hair         185 DC Comics
-## 4 Abomination   Yes           green       Human /… No Hair         203 Marvel C…
-## 5 Abraxas       Yes           blue        Cosmic … Black            NA Marvel C…
-## 6 Absorbing Man Yes           blue        Human    No Hair         193 Marvel C…
-## # … with 4 more variables: `Skin color` &lt;chr&gt;, Alignment &lt;chr&gt;, Weight &lt;dbl&gt;,
-## #   bmi &lt;dbl&gt;
+##   name        Water_allergy `Eye color` Race  `Hair color` Height Publisher `Skin color`
+##   &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;       
+## 1 A-Bomb      Yes           yellow      Human No Hair         203 Marvel C… -           
+## 2 Abe Sapien  Yes           blue        Icth… No Hair         191 Dark Hor… blue        
+## 3 Abin Sur    Yes           blue        Unga… No Hair         185 DC Comics red         
+## 4 Abomination Yes           green       Huma… No Hair         203 Marvel C… -           
+## 5 Abraxas     Yes           blue        Cosm… Black            NA Marvel C… -           
+## 6 Absorbing … Yes           blue        Human No Hair         193 Marvel C… -           
+## # … with 3 more variables: Alignment &lt;chr&gt;, Weight &lt;dbl&gt;, bmi &lt;dbl&gt;
 ```
 
 ---
@@ -1498,7 +1528,7 @@ ggplot(data = df,
 
 .pull-right-c[
 
-![](day_one_files/figure-html/unnamed-chunk-37-1.png)&lt;!-- --&gt;
+![](day_one_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
 
 Figure 1. A scatterplot of superheros' height and weight.
 
@@ -1525,7 +1555,7 @@ ggplot(data = df,
 
 .pull-right-c[
 
-![](day_one_files/figure-html/unnamed-chunk-38-1.png)&lt;!-- --&gt;
+![](day_one_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
 Figure 1. A scatterplot of superheros' height and weight.
 
@@ -1900,7 +1930,7 @@ class: middle, inverse
 ---
 class: middle, inverse
 
-## .fat[.fancy[Next level stuff: 🎁 R packages 🎁]]
+## .fat[.fancy[Next level stuff: R packages 🎁]]
 
 ### Building R packages is beyond the scope of the workshop but definitely useful to get into. See [R Packages Book](https://r-pkgs.org/) for more information. 
 
@@ -1972,12 +2002,9 @@ class: middle, inverse
 
 1. Use `cookiecutter` to create a project from scratch or use a project template that serves the purpose, e.g., [The Example Project](https://github.com/AnneOkk/example_project)
 2. Create an R Markdown template that you would like to use (e.g., APA7 paper with `papaja` package) 
-3. If you already have an analysis script, move the files into the correct folders (e.g., raw data into `data/raw` subfolder, R functions into `R` folder) ❕❗__Do not forget to refer to the files using relative paths__ ❕❗ 
+3. If you already have an analysis script, move the files into the correct folders (e.g., raw data into `data/raw` subfolder, custom R functions into `R` folder) ❕❗__Do not forget to refer to the files using relative paths__ ❕❗ 
 4. 🧶 KNIT to html or pdf
 
-&lt;br /&gt; 
-[OPTIONAL] Add custom style (`.csl`) and bibliography (`.bib`) files and use references in the text  
-[OPTIONAL] Add custom styling (e.g., a table of contents); improve the looks of your figures and tables
  
 
 
