@@ -163,10 +163,13 @@ class: middle, inverse
 ### 🧘 guaranteed reproducibility, less mistakes
 
 ---
-
 class: middle, inverse
 
 ## .fat[.fancy[Workshop overview]]
+
+???
+
+record sessions - alright?
 
 ---
 class: middle, inverse
@@ -174,16 +177,17 @@ class: middle, inverse
 ## .fancy[Day 1:]
 
 .pull-left[
-#### 1. R Markdown metadata
+#### 1. R Markdown basics
 #### 2. Writing text 
 #### 3. Reference management 
 #### 4. Writing code 
 #### 5. Figures, tables, and plots
+#### 6. R project organization 
 ]
 --
 .pull-right[
 
-#### .fancy[GOAL 1] 💪 Write your analysis script(s) in R Markdown
+#### .fancy[GOAL 1] 💪 Write your analysis scripts in R Markdown
 #### .fancy[GOAL 2] 💪 Convert the output into a format of your choice (word, html, pdf) 
 #### .fancy[GOAL 3] 💪 Add text, figures/tables, and references  
 #### .fancy[GOAL 4] 💪 Learn proper project structuring and using templates
@@ -198,16 +202,18 @@ class: middle, inverse
 .pull-left[
 #### 1. Git & GitHub basics
 #### 2. Collaborating using Git & GitHub 
-#### 3. Blogdown - build your project website 
-#### 4. xaringan, bookdown & Co
+#### 3. Osf integration 
+#### 4. Blogdown - build your project website 
+#### 5. Xaringan, bookdown & Co.
 ]
 --
 .pull-right[
 
 #### .fancy[GOAL 1] 💪 Learn how to use Git & GitHub for version control 
 #### .fancy[GOAL 2] 💪 Learn how to collaborate using Git & GitHub 
-#### .fancy[GOAL 3] 💪 Build your own data analysis project website   
-#### .fancy[GOAL 4] 💪 Learn how to use R & Markdown to produce a multitude of outputs (books, presentations, interactive applications)
+#### .fancy[GOAL 3] 💪 Share your code and data through osf 
+#### .fancy[GOAL 4] 💪 Build your own data analysis project website   
+#### .fancy[GOAL 5] 💪 Learn how to use R & Markdown to produce a multitude of outputs (books, presentations, interactive applications)
 ]
 
 ---
@@ -233,7 +239,6 @@ class: middle, inverse
 
 # Find me at...
 
-[Web](https://anneokk.netlify.app/)  
 [LinkedIn](https://linkedin.com/in/anne-kathrin-kleine)  
 [GitHub](https://github.com/AnneOkk)  
 [AnneKathrinKleine.com](https://AnneKathrinKleine.com)  
@@ -279,11 +284,12 @@ class: middle, inverse
 
 class: middle, inverse
 
-## .fat[.fancy[Helpful resources (...that helped me creating these slides):]] 
+## .fat[.fancy[Major resources:]] 
 
-### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
 ### [Advanced R Markdown Workshop R Conf 2019](https://arm.rbind.io/)
 ### [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
+
 
 ---
 
@@ -299,7 +305,8 @@ doc <- toc <- readLines(file_name)
 tocc <- character()
 for (i in 1:length(toc)) {
   if(substr(toc[i][1], 1, 2) == "# ") {
-    toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
+    toc[i] <- gsub("# Introduction", "", toc[i], fixed = TRUE) %>% 
+      gsub("# ", "", ., fixed = TRUE) %>% 
       gsub(".fancy", "", ., fixed = TRUE) %>% 
       gsub("[", "", ., fixed = TRUE) %>% 
       gsub("]", "", ., fixed = TRUE) %>% 
@@ -312,7 +319,7 @@ for (i in 1:length(toc)) {
   }
 }
 
-tocc <- paste("- ", tocc[-1:-5])
+tocc <- paste("- ", tocc[c(-1:-5, -15)]) 
 
 row_outline <- which(doc == "# Detailed Outline")
 row_body <- which(doc == "---")
@@ -332,18 +339,13 @@ writeLines(doc, file_name)
 -  Creating an R project🐣
 -  The YAML header
 -  Writing text 📝
--  Introduction
+-  
 -  Reference management
--  Code
--  chunk option defaults
--  packages
+-  Writing code
 -  Figures
 -  Plots - ggplot2
 -  Tables
 -  Structure your project
--  chunk option defaults
--  packages
--  custom functions
 -  🎉 Yey, you're all set! 🎉 
 -  Your turn! 🤹
 
@@ -621,7 +623,7 @@ output: word_document #<<
 ---
 class: middle, inverse
 
-## .fancy[YAML &mdash; Strings &mdash; External Files]
+## .fancy[YAML &mdash; External Files]
 
 ```{r, eval=FALSE}
 ---
@@ -1176,7 +1178,7 @@ This is the last sentence of an APA style manuscript.
 ---
 class: middle, inverse
 
-# .fat[.fancy[Code]]
+# .fat[.fancy[Writing code]]
 ## Data: [Superhero Dataset](https://domosoftware.sharepoint.com/:x:/s/CS-Edu-PublicFiles/EfRNaW_lszlHg-m2hMNZnLABv0bM12TTLVrS3MtSD1bzrw?e=f2gBgd)
 
 ---
@@ -1349,9 +1351,9 @@ It is recommended to use the first code chunk for general setup, where you can
 
 ````md
 `r ''````{r, setup, include=FALSE}
-# chunk option defaults
+## chunk option defaults
 knitr::opts_chunk$set(echo=FALSE, message=FALSE)
-# packages
+## packages
 library(dplyr)
 library(ggplot2)
 library(stargazer)
@@ -1820,14 +1822,14 @@ class: middle, inverse
 ### The setup chunk becomes:
 ````md
 `r ''````{r, setup, include=FALSE}
-# chunk option defaults
+## chunk option defaults
 knitr::opts_chunk$set(echo=FALSE, message=FALSE)
-# packages
+## packages
 library(dplyr)
 library(ggplot2)
 library(stargazer)
 library(readxl)
-# custom functions
+## custom functions
 source("remote-functions.R")
 ```
 ````
@@ -1869,7 +1871,7 @@ class: middle, inverse
 
 - install and load the papaja library 
 
-```{r echo = TRUE}
+```{r echo = TRUE, eval = FALSE}
 remotes::install_github("crsh/papaja@devel")
 ```
 

@@ -142,10 +142,13 @@ class: middle, inverse
 ### 🧘 guaranteed reproducibility, less mistakes
 
 ---
-
 class: middle, inverse
 
 ## .fat[.fancy[Workshop overview]]
+
+???
+
+record sessions - alright?
 
 ---
 class: middle, inverse
@@ -153,16 +156,17 @@ class: middle, inverse
 ## .fancy[Day 1:]
 
 .pull-left[
-#### 1. R Markdown metadata
+#### 1. R Markdown basics
 #### 2. Writing text 
 #### 3. Reference management 
 #### 4. Writing code 
 #### 5. Figures, tables, and plots
+#### 6. R project organization 
 ]
 --
 .pull-right[
 
-#### .fancy[GOAL 1] 💪 Write your analysis script(s) in R Markdown
+#### .fancy[GOAL 1] 💪 Write your analysis scripts in R Markdown
 #### .fancy[GOAL 2] 💪 Convert the output into a format of your choice (word, html, pdf) 
 #### .fancy[GOAL 3] 💪 Add text, figures/tables, and references  
 #### .fancy[GOAL 4] 💪 Learn proper project structuring and using templates
@@ -177,16 +181,18 @@ class: middle, inverse
 .pull-left[
 #### 1. Git &amp; GitHub basics
 #### 2. Collaborating using Git &amp; GitHub 
-#### 3. Blogdown - build your project website 
-#### 4. xaringan, bookdown &amp; Co
+#### 3. Osf integration 
+#### 4. Blogdown - build your project website 
+#### 5. Xaringan, bookdown &amp; Co.
 ]
 --
 .pull-right[
 
 #### .fancy[GOAL 1] 💪 Learn how to use Git &amp; GitHub for version control 
 #### .fancy[GOAL 2] 💪 Learn how to collaborate using Git &amp; GitHub 
-#### .fancy[GOAL 3] 💪 Build your own data analysis project website   
-#### .fancy[GOAL 4] 💪 Learn how to use R &amp; Markdown to produce a multitude of outputs (books, presentations, interactive applications)
+#### .fancy[GOAL 3] 💪 Share your code and data through osf 
+#### .fancy[GOAL 4] 💪 Build your own data analysis project website   
+#### .fancy[GOAL 5] 💪 Learn how to use R &amp; Markdown to produce a multitude of outputs (books, presentations, interactive applications)
 ]
 
 ---
@@ -212,7 +218,6 @@ class: middle, inverse
 
 # Find me at...
 
-[Web](https://anneokk.netlify.app/)  
 [LinkedIn](https://linkedin.com/in/anne-kathrin-kleine)  
 [GitHub](https://github.com/AnneOkk)  
 [AnneKathrinKleine.com](https://AnneKathrinKleine.com)  
@@ -258,11 +263,12 @@ class: middle, inverse
 
 class: middle, inverse
 
-## .fat[.fancy[Helpful resources (...that helped me creating these slides):]] 
+## .fat[.fancy[Major resources:]] 
 
-### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
 ### [Advanced R Markdown Workshop R Conf 2019](https://arm.rbind.io/)
 ### [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+### R Markdown Workshop by [Resul Umit](https://resulumit.com/teaching/rmd_workshop.html#112)
+
 
 ---
 
@@ -278,18 +284,13 @@ class: middle, inverse
 -  Creating an R project🐣
 -  The YAML header
 -  Writing text 📝
--  Introduction
+-  
 -  Reference management
--  Code
--  chunk option defaults
--  packages
+-  Writing code
 -  Figures
 -  Plots - ggplot2
 -  Tables
 -  Structure your project
--  chunk option defaults
--  packages
--  custom functions
 -  🎉 Yey, you're all set! 🎉 
 -  Your turn! 🤹
 
@@ -1146,7 +1147,7 @@ This is the last sentence of an APA style manuscript.
 ---
 class: middle, inverse
 
-# .fat[.fancy[Code]]
+# .fat[.fancy[Writing code]]
 ## Data: [Superhero Dataset](https://domosoftware.sharepoint.com/:x:/s/CS-Edu-PublicFiles/EfRNaW_lszlHg-m2hMNZnLABv0bM12TTLVrS3MtSD1bzrw?e=f2gBgd)
 
 ---
@@ -1220,15 +1221,14 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name        Water_allergy `Eye color` Race  `Hair color` Height Publisher `Skin color`
-##   &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;       
-## 1 A-Bomb      Yes           yellow      Human No Hair         203 Marvel C… -           
-## 2 Abe Sapien  Yes           blue        Icth… No Hair         191 Dark Hor… blue        
-## 3 Abin Sur    Yes           blue        Unga… No Hair         185 DC Comics red         
-## 4 Abomination Yes           green       Huma… No Hair         203 Marvel C… -           
-## 5 Abraxas     Yes           blue        Cosm… Black            NA Marvel C… -           
-## 6 Absorbing … Yes           blue        Human No Hair         193 Marvel C… -           
-## # … with 3 more variables: Alignment &lt;chr&gt;, Weight &lt;dbl&gt;, bmi &lt;dbl&gt;
+##   name          Water_allergy `Eye color` Race              `Hair color` Height Publisher         `Skin color` Alignment Weight   bmi
+##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;             &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 A-Bomb        Yes           yellow      Human             No Hair         203 Marvel Comics     -            good         441   107
+## 2 Abe Sapien    Yes           blue        Icthyo Sapien     No Hair         191 Dark Horse Comics blue         good          65    18
+## 3 Abin Sur      Yes           blue        Ungaran           No Hair         185 DC Comics         red          good          90    26
+## 4 Abomination   Yes           green       Human / Radiation No Hair         203 Marvel Comics     -            bad          441   107
+## 5 Abraxas       Yes           blue        Cosmic Entity     Black            NA Marvel Comics     -            bad           NA    NA
+## 6 Absorbing Man Yes           blue        Human             No Hair         193 Marvel Comics     -            bad          122    33
 ```
 
 ---
@@ -1250,15 +1250,14 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name        Water_allergy `Eye color` Race  `Hair color` Height Publisher `Skin color`
-##   &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;       
-## 1 A-Bomb      Yes           yellow      Human No Hair         203 Marvel C… -           
-## 2 Abe Sapien  Yes           blue        Icth… No Hair         191 Dark Hor… blue        
-## 3 Abin Sur    Yes           blue        Unga… No Hair         185 DC Comics red         
-## 4 Abomination Yes           green       Huma… No Hair         203 Marvel C… -           
-## 5 Abraxas     Yes           blue        Cosm… Black            NA Marvel C… -           
-## 6 Absorbing … Yes           blue        Human No Hair         193 Marvel C… -           
-## # … with 3 more variables: Alignment &lt;chr&gt;, Weight &lt;dbl&gt;, bmi &lt;dbl&gt;
+##   name          Water_allergy `Eye color` Race              `Hair color` Height Publisher         `Skin color` Alignment Weight   bmi
+##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;             &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 A-Bomb        Yes           yellow      Human             No Hair         203 Marvel Comics     -            good         441   107
+## 2 Abe Sapien    Yes           blue        Icthyo Sapien     No Hair         191 Dark Horse Comics blue         good          65    18
+## 3 Abin Sur      Yes           blue        Ungaran           No Hair         185 DC Comics         red          good          90    26
+## 4 Abomination   Yes           green       Human / Radiation No Hair         203 Marvel Comics     -            bad          441   107
+## 5 Abraxas       Yes           blue        Cosmic Entity     Black            NA Marvel Comics     -            bad           NA    NA
+## 6 Absorbing Man Yes           blue        Human             No Hair         193 Marvel Comics     -            bad          122    33
 ```
 
 ---
@@ -1342,9 +1341,9 @@ It is recommended to use the first code chunk for general setup, where you can
 
 ````md
 ```{r, setup, include=FALSE}
-# chunk option defaults
+## chunk option defaults
 knitr::opts_chunk$set(echo=FALSE, message=FALSE)
-# packages
+## packages
 library(dplyr)
 library(ggplot2)
 library(stargazer)
@@ -1897,14 +1896,14 @@ class: middle, inverse
 ### The setup chunk becomes:
 ````md
 ```{r, setup, include=FALSE}
-# chunk option defaults
+## chunk option defaults
 knitr::opts_chunk$set(echo=FALSE, message=FALSE)
-# packages
+## packages
 library(dplyr)
 library(ggplot2)
 library(stargazer)
 library(readxl)
-# custom functions
+## custom functions
 source("remote-functions.R")
 ```
 ````
