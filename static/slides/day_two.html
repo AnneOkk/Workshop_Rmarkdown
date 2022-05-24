@@ -620,6 +620,41 @@ class: middle, inverse
 
 
 ---
+class: middle, inverse
+
+# .fat[.fancy[Integrating osf with GitHub]]
+
+&lt;img src="img/osf.png" width="200px"/&gt; 
+---
+class: middle, inverse
+
+## .fancy[Integrating osf with GitHub]
+
+### 1. Create your osf project 
+### 2. Enable GitHub in Add-ons
+
+&lt;img src="img/osf_int.png" width="500px"/&gt;
+
+---
+class: middle, inverse
+
+## .fancy[Integrating osf with GitHub]
+
+### 3. Import GitHub Account
+
+&lt;img src="img/osf_imp.png" width="500px"/&gt;
+
+---
+
+class: middle, inverse
+
+## .fancy[Integrating osf with GitHub]
+
+### 4. Select Repo
+
+&lt;img src="img/osf_sel.png" width="500px"/&gt;
+
+---
 
 class: middle, inverse
 
@@ -674,15 +709,24 @@ class: inverse, middle, center
 name: start-here
 class: inverse, middle
 
-## .fancy[.center[Build a site local with GitHub]]
+# .fancy[Build a site for your project]
 
-### .fancy[.center[💻 + &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;]]
+1) Create an R blogdown project  
+&lt;img src="img/blog_proj.png" width="200px"/&gt;
 
-1. Create an R blogdown project
+2) Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
-1. Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
+3) Connect remote repo to local 
+    
 
-1. Connect remote repo to local 
+---
+name: start-here
+class: inverse, middle
+  
+# .fancy[Build a site for your project]
+  
+4) Serve site  
+  &lt;img src="img/serve.png" width="200px"/&gt;
 
 
 ---
@@ -834,23 +878,23 @@ class: middle, inverse, center
 ---
 template: earlydeploy
 
-## Go to [Netlify.com](https://www.netlify.com/) &amp; Log in
+### Go to [Netlify.com](https://www.netlify.com/) &amp; Log in
 
-&lt;img src="img/netlify-landing.png" width="1316" /&gt;
+&lt;img src="img/netlify-landing.png" width="40%" /&gt;
 
 ---
 template: earlydeploy
 
 
-## Connect netlify with to GitHub repository 
-&lt;img src="img/connectnet.png" width="1968" /&gt;
+### Connect netlify with to GitHub repository 
+&lt;img src="img/connectnet.png" width="40%" /&gt;
 
 ---
 
 template: earlydeploy
 
-## Configure Netlify on GitHub
-&lt;img src="img/confignet.png" width="2096" /&gt;
+### Configure Netlify on GitHub
+&lt;img src="img/confignet.png" width="40%" /&gt;
 
 ---
 name: livereload
@@ -905,39 +949,49 @@ So how do you edit a Hugo theme if you are not to touch anything in this folder?
 ---
 class: middle, inverse
 
-## .fancy[Themes]
+# .fat[.fancy[Themes]]
 
 Look in `/themes/hugo-lithium/`. Notice now the folder structure here *mirrors* your Hugo directory structure.
 
-&lt;img src="img/hugolith.png" width="80%" /&gt;
+&lt;img src="img/hugolith.png" width="70%" /&gt;
 
 ---
 
 class: middle, inverse
 
-## .fat[.fancy[Choose your theme]]
+## .fancy[Choose your theme]
+
+See [here](https://themes.gohugo.io) for a collection of Hugo themes. 
 
 .pull-left[
-&lt;img src="img/themes.png" width="90%" /&gt;
+&lt;img src="img/themes.png" width="80%" /&gt;
+
+Recommended workflow: create a new site with desired theme
+
+```r
+# create a new site with the anatole
+# theme
+blogdown::new_site(theme = 
+                     "lxndrblz/anatole")
+```
+
 ]
 
 .pull-right[
-### follow the instructions
-&lt;img src="img/instruct.png" width="90%" /&gt;
+Existing site, new theme: 
+
+
+```r
+blogdown::install_theme(theme = "lxndrblz/anatole")
+```
+
+2. Move the configuration file (config.yaml or config.toml) from the themes/theme-name/exampleSite/ directory to the root directory of your website to match the newly installed theme.
+
+3. Carefully inspect the differences between your new theme’s exampleSite and the files inside your content/ folder. A theme’s exampleSite content is tailored to a specific theme.
 ]
 
 ---
-class: middle, inverse
 
-## .fat[.fancy[Install theme using blogdown]]
-
-```
-blogdown::install_theme(theme = "lxndrblz/anatole",
-theme_example = TRUE, 
-update_config = TRUE)
-```
-
----
 class: middle, inverse
 
 name: hugo-blog
@@ -1054,6 +1108,34 @@ You need to do two things:
 
 1. add an `_index.md` file to `content/` (not in a subfolder)
 1. update the `index.html` layout
+
+---
+
+class: middle, inverse
+
+# .salt[.fancy[Your turn! 🤹]]
+
+1. Create a new blogdown project with the theme of your choice (follow the workflow described [here](https://bookdown.org/yihui/blogdown/other-themes.html#new-site-new-theme))
+
+2. Connect your blogdown project to a remote GitHub repository 
+
+3. Create a netlify account and connect netlify with GitHub 
+
+4. Publish your blogdown page through netlify 
+
+---
+class: middle, inverse
+
+# .fat[.fancy[Other fancy R tools]] 🌟
+
+---
+class: middle, inverse
+
+# .fat[.fancy[Shiny applications]] 🌟
+
+See [here](https://shiny.rstudio.com/)
+&lt;img src="img/shiny.png" width="70%" /&gt;
+---
 
 
 
