@@ -1223,16 +1223,14 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name          Water_allergy `Eye color` Race     `Hair color` Height Publisher
-##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;    
-## 1 A-Bomb        Yes           yellow      Human    No Hair         203 Marvel C…
-## 2 Abe Sapien    Yes           blue        Icthyo … No Hair         191 Dark Hor…
-## 3 Abin Sur      Yes           blue        Ungaran  No Hair         185 DC Comics
-## 4 Abomination   Yes           green       Human /… No Hair         203 Marvel C…
-## 5 Abraxas       Yes           blue        Cosmic … Black            NA Marvel C…
-## 6 Absorbing Man Yes           blue        Human    No Hair         193 Marvel C…
-## # … with 4 more variables: `Skin color` &lt;chr&gt;, Alignment &lt;chr&gt;, Weight &lt;dbl&gt;,
-## #   bmi &lt;dbl&gt;
+##   name          Water_allergy `Eye color` Race              `Hair color` Height Publisher       `Skin color` Alignment Weight   bmi
+##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;             &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 A-Bomb        Yes           yellow      Human             No Hair         203 Marvel Comics   -            good         441   107
+## 2 Abe Sapien    Yes           blue        Icthyo Sapien     No Hair         191 Dark Horse Com… blue         good          65    18
+## 3 Abin Sur      Yes           blue        Ungaran           No Hair         185 DC Comics       red          good          90    26
+## 4 Abomination   Yes           green       Human / Radiation No Hair         203 Marvel Comics   -            bad          441   107
+## 5 Abraxas       Yes           blue        Cosmic Entity     Black            NA Marvel Comics   -            bad           NA    NA
+## 6 Absorbing Man Yes           blue        Human             No Hair         193 Marvel Comics   -            bad          122    33
 ```
 
 ---
@@ -1254,16 +1252,14 @@ head(df)
 
 ```
 ## # A tibble: 6 × 11
-##   name          Water_allergy `Eye color` Race     `Hair color` Height Publisher
-##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;    
-## 1 A-Bomb        Yes           yellow      Human    No Hair         203 Marvel C…
-## 2 Abe Sapien    Yes           blue        Icthyo … No Hair         191 Dark Hor…
-## 3 Abin Sur      Yes           blue        Ungaran  No Hair         185 DC Comics
-## 4 Abomination   Yes           green       Human /… No Hair         203 Marvel C…
-## 5 Abraxas       Yes           blue        Cosmic … Black            NA Marvel C…
-## 6 Absorbing Man Yes           blue        Human    No Hair         193 Marvel C…
-## # … with 4 more variables: `Skin color` &lt;chr&gt;, Alignment &lt;chr&gt;, Weight &lt;dbl&gt;,
-## #   bmi &lt;dbl&gt;
+##   name          Water_allergy `Eye color` Race              `Hair color` Height Publisher       `Skin color` Alignment Weight   bmi
+##   &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;             &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 A-Bomb        Yes           yellow      Human             No Hair         203 Marvel Comics   -            good         441   107
+## 2 Abe Sapien    Yes           blue        Icthyo Sapien     No Hair         191 Dark Horse Com… blue         good          65    18
+## 3 Abin Sur      Yes           blue        Ungaran           No Hair         185 DC Comics       red          good          90    26
+## 4 Abomination   Yes           green       Human / Radiation No Hair         203 Marvel Comics   -            bad          441   107
+## 5 Abraxas       Yes           blue        Cosmic Entity     Black            NA Marvel Comics   -            bad           NA    NA
+## 6 Absorbing Man Yes           blue        Human             No Hair         193 Marvel Comics   -            bad          122    33
 ```
 
 ---
@@ -1671,7 +1667,7 @@ stargazer(data = head(df, n = 3), type = "latex", summary = FALSE)
 &lt;tr&gt;&lt;td style="text-align:left"&gt;3&lt;/td&gt;&lt;td&gt;Abin Sur&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;blue&lt;/td&gt;&lt;td&gt;Ungaran&lt;/td&gt;&lt;td&gt;No Hair&lt;/td&gt;&lt;td&gt;185&lt;/td&gt;&lt;td&gt;DC Comics&lt;/td&gt;&lt;td&gt;red&lt;/td&gt;&lt;td&gt;good&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan="12" style="border-bottom: 1px solid black"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-??? 
+???
 
 Show example 
 

@@ -17,14 +17,11 @@ images:
     alt: Desert Scene
     stretch: stretchH
 weight: 1
----
+--- 
 
 ## Day 1
 
-### Get the slide decks! 
-
-Click [here](https://anneokk.netlify.app/slides/day_one.html#1) to view the slide deck for Day 1.
- 
+See the [slides as pdf](/slides/day_one.pdf)
 
 ```{r echo = FALSE, include = TRUE}
 knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1') 

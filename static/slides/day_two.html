@@ -192,7 +192,7 @@ class: middle, inverse
 
 
 #### 🤹‍♂️ Various integration options
-- GitHub can integrate with many common platforms such as Amazon and Google Cloud; or use GitHub pages or Netlify to build websites based on your R (Markdown) files 
+- Amazon and Google Cloud; or use GitHub pages or Netlify to build websites based on your R files 
 ]
 ---
 class: middle, inverse
@@ -226,8 +226,11 @@ class: middle, inverse
 
 ### To commit
 - to take a snapshot of a repository
-- it is like saving a new version of all files and sub-folders in your project folder with a new name
 - it is local, the records are kept on your computer unless you push
+
+???
+
+- it is like saving a new version of all files and sub-folders in your project folder with a new name
 
 --
 
@@ -275,7 +278,7 @@ class: middle, inverse
 
 #### 🚫 If these steps did not work, go back [here](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git) and continue setting up Git where you left off
 
-#### Don't want to use the terminal ❓ ▶ For version control in RStudio, see [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN), and particularly [**this video**](https://www.youtube.com/watch?v=megZYkCLMA4)
+#### You really don't want to use the terminal ❓ ▶ For version control in RStudio, see [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN), and particularly [**this video**](https://www.youtube.com/watch?v=megZYkCLMA4)
 ---
 
 class: middle, inverse
@@ -329,7 +332,7 @@ class: middle, inverse
 
 .blue-h[`git add .`] this stages all the content in that folder to be committed
 
-.blue-h[`git commit -m "add empty readme"`] stages all content to be pushed in next step
+.blue-h[`git commit -m "add empty readme"`] stages all content to be pushed 
 
 
 ]
@@ -664,7 +667,7 @@ class: middle, inverse
 
 ### .fancy[Making Websites in R Markdown]
 
-### Material adapted from [Alison Hill and Yihui Xie's Advanced R Workshop](https://github.com/rstudio-education/arm-workshop-rsc2019)
+### Major resources: [Alison Hill and Yihui Xie's Advanced R Workshop](https://github.com/rstudio-education/arm-workshop-rsc2019)
 ---
 
 class: middle, inverse
@@ -694,9 +697,9 @@ class: middle, inverse
 
 ## .fancy[Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?]
 
-- No R Markdown support (even math support is often nonexistent or awkward)
+- No R (Markdown) support (even math support is often nonexistent)
 
-- If all you want to write about is what you had for breakfast today, or how cute your kittens are, there is no need to use blogdown. If there is anything related to R, statistical computing, and/or graphics, blogdown will be much more convenient.
+- If there is anything related to R, statistical computing, and/or graphics, blogdown will be much more convenient
 
 ---
 class: inverse, middle, center
@@ -712,6 +715,7 @@ class: inverse, middle
 # .fancy[Build a site for your project]
 
 1) Create an R blogdown project  
+
 &lt;img src="img/blog_proj.png" width="200px"/&gt;
 
 2) Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
@@ -736,11 +740,6 @@ class: middle, inverse, center
 # 🔮
 
 ## .fancy[Gaze into your directory structure]
-
-.footnote[
-https://bookdown.org/yihui/blogdown/a-quick-example.html
-]
-
 
 ---
 class: inverse, middle
@@ -897,23 +896,8 @@ template: earlydeploy
 &lt;img src="img/confignet.png" width="40%" /&gt;
 
 ---
-name: livereload
+class: middle, inverse
 
-class: center, inverse, middle
-
-# 🛎
-
-# .fancy[Click save!]
-
-Through the magic of .fancy[.bright[LiveReload]], 
-you don't need to serve your site again.
-
-
-???
-
-What are we seeing here? Everything that is the public folder. 
-
----
 name: hugo-themes
 
 # 🔐 Directory Structure
@@ -998,8 +982,8 @@ name: hugo-blog
 
 ## .fat[.fancy[Archetypes]]
 
-They are like a template for the content on your site  
-You may create your own archetypes! See the blog posts [here](https://www.apreshill.com/blog/2019-02-spoonful-archetypes/) and [here](http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/)
+- They are like a template for the content on your site   
+- You may create your own archetypes! See the blog posts [here](https://www.apreshill.com/blog/2019-02-spoonful-archetypes/) and [here](http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/)
 
 
 ```r
@@ -1015,9 +999,9 @@ class: inverse, middle
 
 ## .fat[.fancy[Layouts]]
 
-They control the looks of elements on your site   
-Since you should not touch the theme folder's files, this is where you can easily customize certain parts of your website  
-See [here](https://github.com/yihui/hugo-xmin/tree/4bb3052d17101512ca1f5c621d7aca66fd9638d1/layouts) for an example
+- They control the looks of elements on your site   
+- Since you should not touch the theme folder's files, this is where you can easily customize certain parts of your website  
+- See [here](https://github.com/yihui/hugo-xmin/tree/4bb3052d17101512ca1f5c621d7aca66fd9638d1/layouts) for an example
 
 ```
 &lt;footer&gt;
@@ -1038,39 +1022,12 @@ class: middle, inverse, center
 
 ## .fat[.fancy[Add new content]]
 
-.footnote[
-https://bookdown.org/yihui/blogdown/rstudio-ide.html
-]
 
 ---
 class: middle, center
 
 &lt;img src="img/blogdown-newpost-unbundle.png" width="70%" /&gt;
 
----
-class: middle, inverse
-
-name: global-options
-
-# 🌍 Other global options
-
-
-```r
-library(usethis)
-edit_r_profile()
-options(blogdown.author = "Author Name",
-        blogdown.ext = ".Rmd",
-        blogdown.subdir = "blog",
-        blogdown.yaml.empty = TRUE,
-        blogdown.new_bundle = TRUE,
-        blogdown.title_case = TRUE)
-```
-
-.footnote[
-[Global options](https://bookdown.org/yihui/blogdown/global-options.html)
-
-[More global options](https://bookdown.org/yihui/blogdown/more-global-options.html)
-]
 
 ---
 class: middle, inverse
@@ -1126,15 +1083,35 @@ class: middle, inverse
 ---
 class: middle, inverse
 
-# .fat[.fancy[Other fancy R tools]] 🌟
+# .fat[.fancy[Other useful R tools]] 🌟
 
 ---
 class: middle, inverse
 
-# .fat[.fancy[Shiny applications]] 🌟
+# .fat[.fancy[Xaringan]] 
 
-See [here](https://shiny.rstudio.com/)
+&lt;img src="img/xaringan.png" width="20%" /&gt;
+
+See [here](https://bookdown.org/yihui/rmarkdown/xaringan.html) for more info.
+---
+
+class: middle, inverse
+
+# .fat[.fancy[Bookdown]] 
+
+&lt;img src="img/bookdown.png" width="60%" /&gt;
+
+See [here](https://bookdown.org/yihui/rmarkdown/xaringan.html) for more info.
+---
+
+
+class: middle, inverse
+
+# .fat[.fancy[Shiny applications]] 
+
 &lt;img src="img/shiny.png" width="70%" /&gt;
+
+See [here](https://shiny.rstudio.com/) for more info
 ---
 
 

@@ -1649,7 +1649,7 @@ library(stargazer)
 stargazer(data = head(df, n = 3), type = "html", summary = FALSE)
 ```
 
-??? 
+???
 
 Show example 
 
