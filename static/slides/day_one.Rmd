@@ -295,43 +295,6 @@ class: middle, inverse
 
 class: middle, inverse
 
-
-```{r, echo=FALSE}
-require("magrittr")
-
-file_name <- rstudioapi::getSourceEditorContext()[["path"]]
-
-doc <- toc <- readLines(file_name)
-tocc <- character()
-for (i in 1:length(toc)) {
-  if(substr(toc[i][1], 1, 2) == "# ") {
-    toc[i] <- gsub("# Introduction", "", toc[i], fixed = TRUE) %>% 
-      gsub("# ", "", ., fixed = TRUE) %>% 
-      gsub(".fancy", "", ., fixed = TRUE) %>% 
-      gsub("[", "", ., fixed = TRUE) %>% 
-      gsub("]", "", ., fixed = TRUE) %>% 
-      gsub(".fat", "", ., fixed = TRUE) %>% 
-      gsub(":", "", ., fixed = TRUE) %>% 
-      gsub("<br>", "", ., fixed = TRUE) %>% 
-      gsub(".salt", "", ., fixed = TRUE) %>% 
-      gsub("#", "", ., fixed = TRUE)
-    tocc <- append(tocc, toc[i])
-  }
-}
-
-tocc <- paste("- ", tocc[c(-1:-5, -15)]) 
-
-row_outline <- which(doc == "# Detailed Outline")
-row_body <- which(doc == "---")
-row_body <- row_body[which(row_body > row_outline)][1]
-
-doc <- c(doc[1:row_outline], "\n", tocc, "\n", doc[(row_body):length(doc)])
-
-
-writeLines(doc, file_name)
-
-```
-
 # Detailed Outline
 
 
@@ -339,7 +302,6 @@ writeLines(doc, file_name)
 -  Creating an R project🐣
 -  The YAML header
 -  Writing text 📝
--  
 -  Reference management
 -  Writing code
 -  Figures
