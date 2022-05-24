@@ -31,7 +31,7 @@ knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1')
 ```
 
 
-Get the slide deck for Day 2 here (Wait PATIENTLY AGAIN)
+Get the slide deck for Day 2 here (Wait patiently)
 
 ```{r echo = FALSE, include = FALSE}
 knitr::include_url('https://anneokk.netlify.app/slides/day_two.html#1') 
