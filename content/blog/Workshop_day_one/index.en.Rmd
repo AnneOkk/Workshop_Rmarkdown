@@ -21,19 +21,20 @@ weight: 1
 
 ## Day 1
 
-See the [slides as pdf](/slides/day_one.pdf)
+See the [slides as pdf](/slides/day_one-compressed.pdf) 
 
 ```{r echo = FALSE, include = TRUE}
 knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1') 
 ```
 
 
-Get the slide deck for Day 2 here (Wait patiently)
+## Day 2
 
-```{r echo = FALSE, include = FALSE}
-knitr::include_url('https://anneokk.netlify.app/slides/day_two.html#1') 
+See the [slides as pdf](/slides/day_two-compressed.pdf)
+
+```{r echo = FALSE, include = TRUE}
+knitr::include_url('https://anneokk.netlify.app/slides/day_two.html#1')  
 ```
 
 
-<iframe src="https://giphy.com/embed/Gj2iZfSI1rMmQ" width="480" height="470" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Gj2iZfSI1rMmQ"></a></p>
 

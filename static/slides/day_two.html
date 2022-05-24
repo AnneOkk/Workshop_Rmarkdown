@@ -1028,6 +1028,42 @@ class: middle, center
 
 &lt;img src="img/blogdown-newpost-unbundle.png" width="70%" /&gt;
 
+---
+
+class: middle, inverse
+
+# 📰 Want to change the landing page?
+
+You need to do two things:
+
+1. add an `_index.md` file to `content/` (not in a subfolder)
+1. update the `index.html` layout
+
+---
+
+class: middle, inverse
+
+name: global-options
+
+# 🌍 Setting global options in .Rprofile
+
+
+```r
+library(usethis)
+edit_r_profile()
+options(blogdown.author = "Author Name",
+        blogdown.ext = ".Rmd",
+        blogdown.subdir = "blog",
+        blogdown.yaml.empty = TRUE, # preserves empty fields in YAML header
+        blogdown.new_bundle = TRUE, # created index.md file (using bundles - storing files related to post in post folder)
+        blogdown.title_case = TRUE)
+```
+
+.footnote[
+[Global options](https://bookdown.org/yihui/blogdown/global-options.html)
+
+[More global options](https://bookdown.org/yihui/blogdown/more-global-options.html)
+]
 
 ---
 class: middle, inverse
@@ -1052,19 +1088,9 @@ class: middle, inverse
 
 - [Blogdown demo site](https://blogdown-demo.rbind.io)
 - [Blogdown book](https://bookdown.org/yihui/blogdown/)
-- [I did a blog post on it](https://alison.rbind.io/post/up-and-running-with-blogdown/)
-- [Also did a workshop](https://alison.rbind.io/talk/blogdown-meetup/)
+- [Blog post](https://alison.rbind.io/post/up-and-running-with-blogdown/)
+- [Blogdown workshop](https://alison.rbind.io/talk/blogdown-meetup/)
 - [Yihui's slides from RStudio Conf](https://slides.yihui.name/2018-blogdown-rstudio-conf-Yihui-Xie.html)
-
----
-class: middle, inverse
-
-# 📰 Want to change the landing page?
-
-You need to do two things:
-
-1. add an `_index.md` file to `content/` (not in a subfolder)
-1. update the `index.html` layout
 
 ---
 
@@ -1112,7 +1138,7 @@ class: middle, inverse
 &lt;img src="img/shiny.png" width="70%" /&gt;
 
 See [here](https://shiny.rstudio.com/) for more info
----
+
 
 
 
