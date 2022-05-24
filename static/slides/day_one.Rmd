@@ -275,7 +275,7 @@ class: middle, inverse
 
 ## .fat[.fancy[How familiar are you with using R for data analysis?]] 
 
-### Go to [menti.com](https://www.menti.com/) 🤸 and enter the code **6959 8626** 
+### Go to [https://www.menti.com/yzy8sx3mb6](menti.com) 🤸 (and enter the code **6959 8626**) 
 
 ### [See results](https://www.mentimeter.com/app/presentation/22b3d8f42894408a6a6c001e1eae6a88/2be87e2a1316)
 
@@ -344,7 +344,6 @@ writeLines(doc, file_name)
 -  Writing code
 -  Figures
 -  Plots - ggplot2
--  Tables
 -  Structure your project
 -  🎉 Yey, you're all set! 🎉 
 -  Your turn! 🤹
@@ -1093,6 +1092,13 @@ class: middle, inverse
 ### Better options: [Zotero](https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/#:~:text=In%20Zotero%20follow%20this%20path,and%20follow%20the%20system%20setup.), [Mendeley](https://rosannavanhespen.nl/rmarkdown/writing-your-thesis-with-r-markdown-2-text-citations-and-equations/#:~:text=Open%20Mendeley%20and%20select%20Mendeley,your%20R%20Markdown%20document%20lives.)
 #### ⭐ [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/) ⭐
 
+
+???
+
+- Zotero: In Rstudio, we can now press CTRL+K 
+- then create the actual bib file (or json - recommended)
+- export to bibtex
+
 ---
 class: middle, inverse
 
@@ -1387,7 +1393,7 @@ class: middle, inverse
 ## .fancy[Inline Code]
   
 ```{r, eval=FALSE, tidy=FALSE}
-If we multiply _pi_ by 5, we get \`r pi * 5`.
+If we multiply _pi_ by 5, we get `r pi * 5`.
 ```
 
 .out-t[If we multiply _pi_ by 5, we get `r pi * 5`.]
@@ -1395,8 +1401,8 @@ If we multiply _pi_ by 5, we get \`r pi * 5`.
 <hr style="height:10px; visibility:hidden;" />
   
 ```{r, eval=FALSE, tidy=FALSE}
-The average height of a superhero in the dataset is \`r mean(df$Height, na.rm = T)`, which would 
-round to \`r round(mean(df$Height, na.rm = T), digits = 1)`.
+The average height of a superhero in the dataset is `r mean(df$Height, na.rm = T)`, which would 
+round to `r round(mean(df$Height, na.rm = T), digits = 1)`.
 ```
 
 .out-t[The average height of a superhero in the dataset is `r mean(df$Height, na.rm = T)`, which would round to `r round(mean(df$Height, na.rm = T), digits = 1)`.]
@@ -1404,7 +1410,7 @@ round to \`r round(mean(df$Height, na.rm = T), digits = 1)`.
 <hr style="height:10px; visibility:hidden;" />
   
 ```{r, eval=FALSE, tidy=FALSE}
-__Only \`r nrow(subset(df, Height < 100))` superheros__ in the dataset are Smallings.
+__Only `r nrow(subset(df, Height < 100))` superheros__ in the dataset are Smallings.
 ```
 
 .out-t[__Only `r nrow(subset(df, Height < 100))` superheros__ in the dataset are Smallings.]
@@ -1419,7 +1425,7 @@ class: middle, inverse
 class: middle, inverse
 ## .fancy[Figures &mdash; Markdown Syntax]
   
-The syntax <span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(figure.extension)</span> embeds images, and/or figures produced elsewhere,<sup>*</sup> into .Rmd documents
+The syntax <span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(figure.extension)</span> embeds images, and/or figures into .Rmd documents
   
 ```{r, eval=FALSE}
 ![A superhero's best friend](img/superdog.jpg)
@@ -1681,6 +1687,10 @@ library(stargazer)
 stargazer(data = head(df, n = 3), type = "html", summary = FALSE)
 ```
 
+??? 
+
+Show example 
+
 
 ---
 ## .fancy[Example regression table with `stargazer`]
@@ -1911,6 +1921,10 @@ Add this to the YAML header (to knit output to `docs` folder):
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs") })
 ```
+
+???
+
+For word: output: apa6_docx
 
 ---
 

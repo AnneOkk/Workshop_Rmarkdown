@@ -289,7 +289,6 @@ class: middle, inverse
 -  Writing code
 -  Figures
 -  Plots - ggplot2
--  Tables
 -  Structure your project
 -  🎉 Yey, you're all set! 🎉 
 -  Your turn! 🤹
@@ -578,7 +577,7 @@ title: "Theming with bslib and thematic"
 ---
 class: middle, inverse
 
-## .fancy[YAML &amp;mdash; Strings &amp;mdash; External Files]
+## .fancy[YAML &amp;mdash; External Files]
 
 
 ```r
@@ -1060,6 +1059,13 @@ class: middle, inverse
 ### Better options: [Zotero](https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/#:~:text=In%20Zotero%20follow%20this%20path,and%20follow%20the%20system%20setup.), [Mendeley](https://rosannavanhespen.nl/rmarkdown/writing-your-thesis-with-r-markdown-2-text-citations-and-equations/#:~:text=Open%20Mendeley%20and%20select%20Mendeley,your%20R%20Markdown%20document%20lives.)
 #### ⭐ [Useful article on how to use Zotero with R Markdown](https://gsverhoeven.github.io/post/zotero-rmarkdown-csl/) ⭐
 
+
+???
+
+- Zotero: In Rstudio, we can now press CTRL+K 
+- then create the actual bib file (or json - recommended)
+- export to bibtex
+
 ---
 class: middle, inverse
 
@@ -1378,7 +1384,7 @@ class: middle, inverse
   
 
 ```r
-If we multiply _pi_ by 5, we get \`r pi * 5`.
+If we multiply _pi_ by 5, we get `r pi * 5`.
 ```
 
 .out-t[If we multiply _pi_ by 5, we get 15.7079633.]
@@ -1387,8 +1393,8 @@ If we multiply _pi_ by 5, we get \`r pi * 5`.
   
 
 ```r
-The average height of a superhero in the dataset is \`r mean(df$Height, na.rm = T)`, which would 
-round to \`r round(mean(df$Height, na.rm = T), digits = 1)`.
+The average height of a superhero in the dataset is `r mean(df$Height, na.rm = T)`, which would 
+round to `r round(mean(df$Height, na.rm = T), digits = 1)`.
 ```
 
 .out-t[The average height of a superhero in the dataset is 186.7263056, which would round to 186.7.]
@@ -1397,7 +1403,7 @@ round to \`r round(mean(df$Height, na.rm = T), digits = 1)`.
   
 
 ```r
-__Only \`r nrow(subset(df, Height &lt; 100))` superheros__ in the dataset are Smallings.
+__Only `r nrow(subset(df, Height &lt; 100))` superheros__ in the dataset are Smallings.
 ```
 
 .out-t[__Only 9 superheros__ in the dataset are Smallings.]
@@ -1412,7 +1418,7 @@ class: middle, inverse
 class: middle, inverse
 ## .fancy[Figures &amp;mdash; Markdown Syntax]
   
-The syntax &lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;!&amp;#91;Figure Caption&amp;#93;(figure.extension)&lt;/span&gt; embeds images, and/or figures produced elsewhere,&lt;sup&gt;*&lt;/sup&gt; into .Rmd documents
+The syntax &lt;span style="background-color: #228B22; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"&gt;!&amp;#91;Figure Caption&amp;#93;(figure.extension)&lt;/span&gt; embeds images, and/or figures into .Rmd documents
   
 
 ```r
@@ -1664,6 +1670,10 @@ stargazer(data = head(df, n = 3), type = "latex", summary = FALSE)
 &lt;tr&gt;&lt;td style="text-align:left"&gt;2&lt;/td&gt;&lt;td&gt;Abe Sapien&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;blue&lt;/td&gt;&lt;td&gt;Icthyo Sapien&lt;/td&gt;&lt;td&gt;No Hair&lt;/td&gt;&lt;td&gt;191&lt;/td&gt;&lt;td&gt;Dark Horse Comics&lt;/td&gt;&lt;td&gt;blue&lt;/td&gt;&lt;td&gt;good&lt;/td&gt;&lt;td&gt;65&lt;/td&gt;&lt;td&gt;18&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td style="text-align:left"&gt;3&lt;/td&gt;&lt;td&gt;Abin Sur&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;blue&lt;/td&gt;&lt;td&gt;Ungaran&lt;/td&gt;&lt;td&gt;No Hair&lt;/td&gt;&lt;td&gt;185&lt;/td&gt;&lt;td&gt;DC Comics&lt;/td&gt;&lt;td&gt;red&lt;/td&gt;&lt;td&gt;good&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan="12" style="border-bottom: 1px solid black"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+??? 
+
+Show example 
 
 
 ---
@@ -1984,6 +1994,10 @@ Add this to the YAML header (to knit output to `docs` folder):
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "../docs") })
 ```
+
+???
+
+For word: output: apa6_docx
 
 ---
 

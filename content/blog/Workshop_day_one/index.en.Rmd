@@ -23,12 +23,10 @@ weight: 1
 
 ### Get the slide decks! 
 
-Get the slide deck for Day 1 here (PLEASE WAIT PATIENTLY!)
-
-<iframe src="https://giphy.com/embed/wpvnJFDdXsBmdvLxjG" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-episode-1-the-office-tv-wpvnJFDdXsBmdvLxjG"></a></p>
+The slide deck for Day 1:
 
 
-```{r echo = FALSE, include = FALSE}
+```{r echo = FALSE, include = TRUE}
 knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1') 
 ```
 

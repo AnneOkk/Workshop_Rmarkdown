@@ -124,8 +124,8 @@ background-size: cover
 
 &lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
 
-
 ---
+
 class: middle, inverse
 
 # .fat[.fancy[Version control]]
@@ -133,7 +133,7 @@ class: middle, inverse
 ---
 class: middle, inverse
 
-## .fancy[Version control]
+## .fancy[Version control] 🎛
 
 .pull-left[
 - Research papers have many versions before publication
@@ -208,9 +208,9 @@ class: middle, inverse
 
 ### GitHub &lt;img src="img/github.png" width="70px" &gt;
 
-- a hosting service, or a website, that can keep the records
-- it is *remote* to you, like the Dropbox website
-- but unlike Dropbox, GitHub is specifically structured to keep records with Git
+- a hosting service that can keep the records
+- it is *remote* to you, like Dropbox
+- GitHub is specifically structured to keep records with Git
 
 
 
@@ -221,12 +221,11 @@ class: middle, inverse
 
 ### Repository, or repo
 - a set of files whose records are kept together, by Git and/or on GitHub
-- it is like a folder, which can keep files and other folders containing files
 
 --
 
 ### To commit
-- to take a snapshot of, or to version, a repository
+- to take a snapshot of a repository
 - it is like saving a new version of all files and sub-folders in your project folder with a new name
 - it is local, the records are kept on your computer unless you push
 
@@ -242,7 +241,13 @@ class: center, inverse
 
 ## .fancy[Version Control &amp;mdash; Git and GitHub]
 
-&lt;img src="img/repository.png" width="500px" &gt;
+&lt;figure&gt;
+    &lt;img src="img/repository.png" width="600px" &gt;
+    &lt;figcaption&gt;
+    &lt;a href="https://iqss.github.io/dss-rbuild/version-control.html"&gt;Source: https://iqss.github.io/dss-rbuild/version-control.html&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
 
 ---
 
@@ -250,12 +255,11 @@ class: middle, inverse
 
 ## .fat[.fancy[How familiar are you with using the command line (terminal, power shell...)?]] 
 
-### Go to [www.menti.com](www.menti.com) 🤸 and enter the code **6059 2895** 
+### Go to [https://www.menti.com/9eof4daf4h](www.menti.com) 🤸 (and enter the code **4173 2433**) 
 
 ### [See results](https://www.mentimeter.com/app/presentation/8377d55da27523147614cd11aba6f796/82eb3869f165)
 
 ---
-
 
 class: middle, inverse
 
@@ -269,8 +273,9 @@ class: middle, inverse
 
 &lt;br /&gt; 
 
-#### 🚫  If these steps did not work, go back [here](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git) and continue setting up Git where you left off
+#### 🚫 If these steps did not work, go back [here](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git) and continue setting up Git where you left off
 
+#### Don't want to use the terminal ❓ ▶ For version control in RStudio, see [here](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN), and particularly [**this video**](https://www.youtube.com/watch?v=megZYkCLMA4)
 ---
 
 class: middle, inverse
@@ -280,15 +285,14 @@ class: middle, inverse
 .pull-left[
 #### 1. Go to GitHub and create a new repository 
 
-&lt;img src="img/new_repo.png" width="200px"/&gt;
+&lt;img src="img/new_repo.png" width="200px"&gt;
 
 ]
 
 .pull-right[
 
 #### 2. Fill in some info, create a public repository (don't bother with Readme etc - those will be added later!)
-&lt;img src="img/testrepo.png" width="250px"/&gt;
-
+&lt;img src="img/testrepo.png" width="250px"&gt;
 
 ]
 ---
@@ -300,14 +304,14 @@ class: middle, inverse
 .pull-left[
 #### 3. Follow the steps in Option 1: .blue-h["…create a new repository on the command line"] 
 
-&lt;img src="img/push.png" width="400px"/&gt;
+&lt;img src="img/push.png" width="400px"&gt;
 
 ]
 
 .pull-right[
 
 #### 4. In the 📱 terminal 📱, navigate to your R project folder 
-&lt;img src="img/navigate.png" width="200px"/&gt;
+&lt;img src="img/navigate.png" width="200px"&gt;
 ]
 
 ---
@@ -321,15 +325,18 @@ class: middle, inverse
 
 .blue-h[`git init`] this initializes a git repo on your local machine
 
+.blue-h[`touch README.md`] this creates an empty README file
+
 .blue-h[`git add .`] this stages all the content in that folder to be committed
 
-.blue-h[`git commit -m "fist commit"`] stages all content to be pushed in next step
+.blue-h[`git commit -m "add empty readme"`] stages all content to be pushed in next step
 
-.blue-h[`git remote add origin https://github.com/AnneOkk/testrepo.git`] substitute with your repo URL 
 
 ]
 
 .pull-right[
+
+.blue-h[`git remote add origin https://github.com/AnneOkk/testrepo.git`] substitute with your repo URL 
 
 .blue-h[`git push origin master`] push all the content from Git to GitHub
 
@@ -369,6 +376,9 @@ class: middle, inverse
 
 ]
 
+???
+for stuff added to gitignore: clear cache before staging for commit!  
+git rm -rf --cached .
 ---
 
 class: middle, inverse
@@ -423,7 +433,14 @@ class: middle, inverse
 &lt;img src="img/clone.png" width="300px"/&gt;
 ]
 
+???
 
+Inviting collaborators to a personal repository
+- Ask for the username of the person you're inviting as a collaborator. ...
+- On GitHub.com, navigate to the main page of the repository.
+- Under your repository name, click Settings.
+- In the "Access" section of the sidebar, click Collaborators &amp; teams.
+- Click Invite a collaborator.
 
 ---
 
@@ -491,11 +508,11 @@ class: middle, inverse
 
 --
 
-You may add small things through `git add .`, `git commit -m "added data reader"`, `git push origin branch-name`
+If the branch has not been removed, you may add smaller changes (on the same feature) through `git add .`, `git commit -m "added data reader"`, `git push origin branch-name`
 
 --
 
-❗ BUT if some time has passed or the addition is major❗
+❗ BUT if some time has passed and/or the addition is major❗
 
 --
 
@@ -661,37 +678,11 @@ class: inverse, middle
 
 ### .fancy[.center[💻 + &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;]]
 
+1. Create an R blogdown project
+
 1. Make a [repo on &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
 
 1. Connect remote repo to local 
-
-1. Create a new R project
-
-1. In console, run:
-
-
-```r
-library(blogdown)
-new_site(theme = "jpescador/hugo-future-imperfect", 
-         sample = TRUE, 
-         theme_example = TRUE, 
-         empty_dirs = TRUE,
-         to_yaml = TRUE)
-```
-
-
-
-???
-
-if an exampleSite exists, it will be in themes/&lt;hugo-future-imperfect&gt;/exampleSite
-
-theme_example copies that exampleSite into your project root directory (you can always delete the content later)
-
-sample adds a sample R Markdown blog post (can end up in wrong place though)
-
-empty_dirs keeps some folders that are initially empty but for important reasons I'll tell you about
-
-finally, to_yaml converts all the exampleSite content to YAML instead of TOML files. We'll talk more about the difference, but this saves you time and is helpful to have done automatically for you.
 
 
 ---
@@ -718,19 +709,15 @@ name: dir-structure
 ```r
 .
 ├── R
-├── README.md
-├── archetypes
 ├── config.yaml
 ├── content
-├── data
-├── example_page.Rproj
+├── website.Rproj
 ├── index.Rmd
 ├── layouts
 ├── netlify.toml
 ├── public
 ├── resources
 ├── static
-├── staticman.yml
 └── themes
 ```
 
@@ -746,19 +733,15 @@ name: hugo-index
 ```r
 .
 ├── R
-├── README.md
-├── archetypes
 ├── config.yaml
 ├── content
-├── data
-├── example_page.Rproj
+├── website.Rproj
 *├── index.Rmd # DO NOT TOUCH!
 ├── layouts
 ├── netlify.toml
 ├── public
 ├── resources
 ├── static
-├── staticman.yml
 └── themes
 ```
 
@@ -787,19 +770,15 @@ name: hugo-public
 ```r
 .
 ├── R
-├── README.md
-├── archetypes
 ├── config.yaml
 ├── content
-├── data
-├── example_page.Rproj
+├── website.Rproj
 ├── index.Rmd 
 ├── layouts
 ├── netlify.toml
 *├── public # IGNORE!
 ├── resources
 ├── static
-├── staticman.yml
 └── themes
 ```
 
@@ -846,21 +825,11 @@ class: center, inverse, top
 .fancy[.bright["Show in new window"]] to see in local browser
 ]
 
-???
-
-What are we seeing here? Everything that is the public folder. 
-
----
-class: middle, inverse, center
-
-
-&lt;img src="day_two_files/figure-html/unnamed-chunk-9-1.gif" width="2000px" /&gt;
-
 ---
 name: earlydeploy
 class: middle, inverse, center
 
-# 📣
+# .fat[.fancy[Publishing]] 📣
 
 ---
 template: earlydeploy
@@ -873,168 +842,15 @@ template: earlydeploy
 template: earlydeploy
 
 
-## Drag &amp; drop the `public/` folder to [deploy](https://bookdown.org/yihui/blogdown/netlify.html)
-
-&lt;img src="img/netlify-new-site.png" width="60%" /&gt;
-
-
----
-class: middle, inverse, center
-
-
-&lt;img src="day_two_files/figure-html/unnamed-chunk-12-1.gif" width="2000px" /&gt;
-
-
----
-name: yourturn
-class: middle, inverse
-
-.left-column[
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;img src="img/Ada_Lovelace_color.svg" width="75%" /&gt;
-
-&lt;!--![](img/Ada_Lovelace_color.svg)--&gt;
-]
-
-.right-column[
-# &lt;i class="fas fa-edit"&gt;&lt;/i&gt; .fancy[Your turn]
-]
-
----
-name: yourturn-1
-template: yourturn
-
-.right-column[
-# .fancy[05:00 minutes]
-### Gaze into your directory structure, and site.
-
-Ideas:
-
-+ Where are the `.md` files for the .bright[blog posts]? .fancy[(i.e., "Creating A New Theme")]
-+ Where is the `.jpg` file you see in the .bright[hex image] stored? What about the featured images for each blog post?
-+ Where is the `.md` file you see under .bright[About]? .fancy[(i.e., "Hugo is a static site engine written in Go.")]
-+ Where are the `.md` files you see under .bright[Itemized]? .fancy[(i.e., fancy apps 1-4)]
-
-]
-
----
-name: outline
-class: middle, inverse
-
-
-# .fancy[Outline]
-
-1. ~~Gaze into your directory structure~~ [🔑](#block1) [🏆](#yourturn-1)
-
-1. Edit the `config.toml` [🔑](#block2) [🏆](#yourturn-2)
-
-1. Edit the `exampleSite` content [🔑](#block3) [🏆](#yourturn-3)
-
-1. Add new content [🔑](#block4) [🏆](#yourturn-4)
-
-1. Deploy [🔑](#block5)  [🏆](#yourturn-5)
-
-
-
----
-name: block2
-class: middle, inverse, center
-
-# 🏡
-
-## Edit the configuration file
-
-.footnote[
-https://bookdown.org/yihui/blogdown/configuration.html
-]
+## Connect netlify with to GitHub repository 
+&lt;img src="img/connectnet.png" width="1968" /&gt;
 
 ---
 
-# Edit `config.toml`
+template: earlydeploy
 
-
-```r
-*baseurl = "/"
-languageCode = "en-us"
-*title = "Ada Lovelace"
-theme = "hugo-future-imperfect"
-preserveTaxonomyNames = true
-paginate = 3
-disqusShortname = "shortname"
-googleAnalytics = ""
-pluralizeListTitles = false
-# Set the followings to true as part of your site SEO
-enableRobotsTXT = true
-canonifyURLs = true
-*ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-*relativeURLS = true
-```
-
-- `&lt;title&gt;Ada Lovelace&lt;/title&gt;`
-
-- `ignoreFiles`: copy and paste this from your R console when you first served your site
-
-- *.bright[Very important!]* Setting `relativeURLS` is critical for ☁️ setup
-
-???
-
-The first thing I do with any new Hugo theme is make sure the baseurl is just a forward slash. That will always work. This theme has that already, but some don't
-
-Do not change theme here- but it refers to the theme folder you want.
-
-You could have multiple Hugo themes in your themes/ directory.
-
-So the theme name should match the name of the folder that holds the theme you want to use.
-
-
-
----
-class: middle, inverse, center
-
-## 🆕 A full `public` folder
-
-
-
-&lt;img src="img/blogdown-public.png" width="35%" /&gt;
-
----
-
-# Back to `config.toml`
-
-
-
-
-```r
-baseurl = "/" 
-languageCode = "en-us"
-title = "Ada Lovelace" 
-theme = "hugo-future-imperfect"
-preserveTaxonomyNames = true
-paginate = 3
-disqusShortname = "shortname"
-googleAnalytics = ""
-pluralizeListTitles = false
-# Set the followings to true as part of your site SEO
-enableRobotsTXT = true
-canonifyURLs = true
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-relativeURLS = true 
-*enableEmoji = true
-[params]
-  # Sets the meta tag description
-* description          = "Ada's blog"
-  # Sets the navbarTitle that appears in the top left of the navigation bar
-* navbarTitle          = "Ada Lovelace"
-  # Sets where "View More Posts" links
-  viewMorePostLink     = "/blog/"
-```
-
-???
-
-There are some standard parameters in hugo config.toml files- just because it isn't in the site's example config doesn't mean you can use them!
+## Configure Netlify on GitHub
+&lt;img src="img/confignet.png" width="2096" /&gt;
 
 ---
 name: livereload
@@ -1054,88 +870,6 @@ you don't need to serve your site again.
 What are we seeing here? Everything that is the public folder. 
 
 ---
-
-# Add image
-
-Mouse over to `static/img/main/` and see `logo.jpg`? We can replace that file, or make new file. I'll replace mine with [this picture](https://raw.githubusercontent.com/apreshill/ada-blog/hugo-theme-future-imperfect/static/img/main/ada_square.jpg).
-
-
-```r
-[params.intro]
-* header    = "Ada Lovelace"
-* paragraph = "A fine place to share my thoughts"
-* about     = ""
-  # This appears at the top of the sidebar above params.intro.header.
-  # A width of less than 100px is recommended from a design perspective.
-  [params.intro.pic]
-*   src       = "/img/main/ada_square.jpg"
-    # Sets Image to be a cirlce
-    circle    = false
-    # Sets Image to be Future Imperfect's hexagon
-    imperfect = true
-    width     = ""
-*   alt       = "Ada portrait from Wikipedia"
-```
-
-
-???
-
-In the Hugo framework, static things are images, CSS, JavaScript, etc.
-
-So you can assume that any image files are expected to be somewhere in the static directory.
-
-Here, it looks like the exampleSite used the path static/img/main. So mouse over there and see if you see logo.jpg. 
-
-You could save over that image, or you can add another image and update the file name in the config file.
-
-
-When Hugo builds your site, all assets inside your static directory are copied over as-is. 
-
----
-class: center, inverse, top
-
-# 🦚 Success?
-
-
-&lt;img src="img/blogdown-configs.png" width="70%" /&gt;
-
-
-.footnote[
-.fancy[.bright["Show in new window"]] to see in local browser
-]
-
----
-name: yourturn-2
-template: yourturn
-
-.right-column[
-# .fancy[05:00 minutes]
-### Edit the `config.toml` to customize your site.
-
-Ideas:
-
-+ Update your `[[menu.main]]` text, Font Awesome icons (or remove!), or switch weights (the order).
-+ Set up your `[social]` media icons.
-+ Change the `highlightjs` theme.
-+ Switch some of the "Optional Params"- see what they do.
-
-.bright[.fancy[Stretch:]] All possible Hugo configuration variables are [listed here](https://gohugo.io/getting-started/configuration/)- try some (like `enableEmoji = TRUE`)!
-
-]
-
----
-name: block3
-class: middle, inverse, center
-
-# 🎩
-
-## Edit the `exampleSite` content
-
-.footnote[
-https://bookdown.org/yihui/blogdown/content.html
-]
-
----
 name: hugo-themes
 
 # 🔐 Directory Structure
@@ -1143,19 +877,17 @@ name: hugo-themes
 
 ```r
 .
-├── .Rproj.user/
-├── ada-blog.Rproj
-├── archetypes/ 
-├── config.toml
-├── content/
-├── data/
-├── index.Rmd
-├── layouts/ 
-├── public/
-├── resources/
-├── static/
-├── staticman.yml
-*└── themes/ # DO NOT TOUCH
+├── R
+├── config.yaml
+├── content
+├── website.Rproj
+├── index.Rmd 
+├── layouts
+├── netlify.toml
+├── public 
+├── resources
+├── static
+*└── themes # Do NOT TOUCH!
 ```
 
 ???
@@ -1173,258 +905,84 @@ So how do you edit a Hugo theme if you are not to touch anything in this folder?
 ---
 class: middle, inverse
 
-# 🔑 Overriding vs editing
+## .fancy[Themes]
 
-&gt; *When you use a theme cloned from its git repository, do not edit the theme’s files directly. Instead, theme customization in Hugo is a matter of overriding the templates made available to you in a theme. This provides the added flexibility of tweaking a theme to meet your needs while staying current with a theme’s upstream.* 
-.footnote[https://gohugo.io/themes/customizing/]
+Look in `/themes/hugo-lithium/`. Notice now the folder structure here *mirrors* your Hugo directory structure.
 
+&lt;img src="img/hugolith.png" width="80%" /&gt;
 
+---
 
+class: middle, inverse
+
+## .fat[.fancy[Choose your theme]]
+
+.pull-left[
+&lt;img src="img/themes.png" width="90%" /&gt;
+]
+
+.pull-right[
+### follow the instructions
+&lt;img src="img/instruct.png" width="90%" /&gt;
+]
 
 ---
 class: middle, inverse
 
-# 🕳 `empty_dirs = TRUE`
+## .fat[.fancy[Install theme using blogdown]]
 
-
-```r
-.
-├── .Rproj.user/
-├── ada-blog.Rproj
-*├── archetypes/
-├── config.toml
-├── content/
-├── data/
-├── index.Rmd
-*├── layouts/
-├── public/
-├── resources/
-├── static/
-├── staticman.yml
-└── themes/
+```
+blogdown::install_theme(theme = "lxndrblz/anatole",
+theme_example = TRUE, 
+update_config = TRUE)
 ```
 
-???
-
-This is why we kept the empty directories when we started our site.
-
-I believe having these here will help you when you do want to edit your theme, as a gentle reminder that you are never to touch the themes folder!
-
 ---
+class: middle, inverse
 
-# Themes
-
-Look in `/themes/hugo-future-imperfect/`. Notice now the folder structure here *mirrors* your Hugo directory structure.
-
-&lt;img src="img/blogdown-theme-dir.png" width="75%" /&gt;
-
----
-
-# Override files in...
-
-.pull-left[
-your .fancy[.bright[theme]] directory...
-
-```r
-└── themes/
-*|   └──  archetypes/
-|   └──  exampleSite/
-|   └──  images/
-*|   └──  layouts/
-*|   └──  static/
-```
-]
-
-.pull-right[
-...with files in your .fancy[.bright[project]] directory.
-
-```r
-.
-├── .Rproj.user/
-├── ada-blog.Rproj
-*├── archetypes/
-├── config.toml
-├── content/
-├── data/
-├── index.Rmd
-*├── layouts/
-├── public/
-├── resources/
-*├── static/
-├── staticman.yml
-└── themes/
-```
-]
-
----
-name: hugo-archetypes
-
-# Hugo Archetypes
-
-
-```r
-.
-├── .Rproj.user/
-├── ada-blog.Rproj
-├── archetypes/ 
-*|   └──  blog.md
-*|   └──  default.md
-*|   └──  itemized.md
-├── config.toml
-├── content/
-├── data/
-├── index.Rmd
-├── layouts/
-├── public/
-├── resources/
-├── static/ 
-├── staticman.yml
-└── themes/
-```
-
-
-???
-
-You can create new content files in Hugo using the hugo new command. By default, Hugo will create new content files with at least date, title (inferred from the file name), and draft = true. This saves time and promotes consistency for sites using multiple content types. 
-
----
 name: hugo-blog
 
-# The blog archetype
+## .fat[.fancy[Archetypes]]
 
-.pull-left[
-`themes/hugo-future-imperfect/archetypes/blog.md`
-```js
-+++
-author = ""
-categories = [""]
-date = ""
-description = ""
-featured = ""
-featuredalt = ""
-featuredpath = ""
-linktitle = ""
-title = ""
-type = "post" 
-+++
-```
-
-]
-
-.pull-right[
-`content/blog/goisforlovers.md`
-```js
----
-author: Unknown Author
-categories:
-- Go
-date: "2014-04-02"
-description: ""
-featured: pic02.jpg
-featuredalt: Pic 2
-featuredpath: date
-linktitle: ""
-title: (Hu)go Template Primer
-type: post
----
-```
-]
-
-
----
-
-# TOML vs. YAML
-
-- TOML is like YAML, but not 
-- blocks wrapped by `+++` vs `---` 
-- Your `config.toml` file doesn't show this explicitly but it is there!
-- key-value pairs are separated by a `=` vs `:` 
-- YAML uses indentation with one or more spaces to describe nested collections 
-
-
---
-
-This is why we used `new_site(to_yaml = TRUE)`!
-
---
-
-If you end up with TOML in your content, try (after backing up your files):
-
-```r
-hugo_convert(to = "YAML", unsafe = TRUE)
-```
-
-
-
---
-
-.footnote[
-https://gohugohq.com/howto/toml-json-yaml-comparison/
-
-https://learnxinyminutes.com/docs/yaml/
-
-https://learnxinyminutes.com/docs/toml/
-]
-
----
-class: inverse, middle, center
-
-# Archetypes 🔄 Layouts
----
-name: hugo-layouts
-
-# Hugo Layouts
+They are like a template for the content on your site  
+You may create your own archetypes! See the blog posts [here](https://www.apreshill.com/blog/2019-02-spoonful-archetypes/) and [here](http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/)
 
 
 ```r
 .
-├── .Rproj.user/
-├── ada-blog.Rproj
-├── archetypes/
-*|   └──  blog.md
-*|   └──  default.md
-*|   └──  itemized.md
-├── config.toml
-├── content/
-├── data/
-├── index.Rmd
-*├── layouts/
-├── public/
-├── resources/
-├── static/ 
-├── staticman.yml
-└── themes/
+├── categories.md
+├── default.md
+└── tags.md
 ```
 
-
-???
-
-Stores templates in the form of .html files that specify how views of your content will be rendered into a static website. 
-
-
 ---
-name: yourturn-3
-template: yourturn
 
-.right-column[
-# .fancy[05:00 minutes]
-### Edit some `exampleSite` content, save, and let "LiveReload" preview your changes.
+class: inverse, middle
 
-1. Edit the .bright[About] page.
+## .fat[.fancy[Layouts]]
 
-1. Edit a .bright[Blog] post.
+They control the looks of elements on your site   
+Since you should not touch the theme folder's files, this is where you can easily customize certain parts of your website  
+See [here](https://github.com/yihui/hugo-xmin/tree/4bb3052d17101512ca1f5c621d7aca66fd9638d1/layouts) for an example
 
-1. .bright[Challenge!] In `content/blog/` there is the sample `.Rmd` blog post titled .fancy["Hello R Markdown"]. Can you find it on the site? Can you spot the problem? .fancy[.bright[hint: it was to do with a YAML parameter that tells Hugo which layout to use]]
-
-]
-
+```
+&lt;footer&gt;
+  {{ partial "foot_custom.html" . }}
+  {{ with .Site.Params.footer }}
+  &lt;hr/&gt;
+  {{ . | markdownify }}
+  {{ end }}
+  &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
 ---
 name: block4
 class: middle, inverse, center
 
 # 📯
 
-## Add new content
+## .fat[.fancy[Add new content]]
 
 .footnote[
 https://bookdown.org/yihui/blogdown/rstudio-ide.html
@@ -1436,59 +994,8 @@ class: middle, center
 &lt;img src="img/blogdown-newpost-unbundle.png" width="70%" /&gt;
 
 ---
+class: middle, inverse
 
-# 🆕 Hugo Page Bundles
-
-
-```r
-library(usethis)
-edit_r_profile()
-*options(blogdown.new_bundle = TRUE)
-```
-
-
----
-
-# 🌱 Page Bundles
-
-
-```r
-content/
-*├── about
-│   ├── index.md
-├── posts
-*│   ├── my-post
-│   │   ├── content1.md
-│   │   ├── content2.md
-│   │   ├── image1.jpg
-│   │   ├── image2.png
-│   │   └── index.md
-*│   └── my-other-post
-│       └── index.md
-```
-
---
-
-Allowed bundle resources:
-+ Page and non-page (like images, pdf, etc.) types
-
---
-
-.footnote[
-https://gohugo.io/content-management/page-bundles/
-]
-
----
-class: middle, inverse, center
-
-&lt;img src="img/blogdown-newpost-bundle.png" width="70%" /&gt;
-
----
-class: middle, inverse, center
-
-&lt;img src="img/blogdown-newcontent-other-bundled.png" width="70%" /&gt;
-
----
 name: global-options
 
 # 🌍 Other global options
@@ -1497,7 +1004,7 @@ name: global-options
 ```r
 library(usethis)
 edit_r_profile()
-options(blogdown.author = "Ada Lovelace",
+options(blogdown.author = "Author Name",
         blogdown.ext = ".Rmd",
         blogdown.subdir = "blog",
         blogdown.yaml.empty = TRUE,
@@ -1512,27 +1019,11 @@ options(blogdown.author = "Ada Lovelace",
 ]
 
 ---
-name: yourturn-4
-template: yourturn
+class: middle, inverse
 
-.right-column[
-# .fancy[05:00 minutes]
-### Add new content
-
-1. .fancy[Optional:] Use `usethis::edit_r_profile` to add some **blogdown** global options.
-  + Don't forget the blank line at the end, and restart your R session, serve your site again.
-
-1. Use the "New Post" addin to create new content.&lt;br&gt;
-  + Try adding a new post to .bright[Blog] (include a featured image in your bundle!)
-  + Try adding a new project to .bright[Itemized]
-
-]
-
-   
----
 name:workflow
 
-# Workflow&lt;sup&gt;*&lt;/sup&gt;
+# .fat[.fancy[Workflow]]
 
 
 - Open your website project, click the "Serve Site" addin
@@ -1543,23 +1034,10 @@ name:workflow
     
 - Push everything to Github
 
-.footnote[
-[\*] From Yihui: https://slides.yihui.name/2017-rmarkdown-UNL-Yihui-Xie.html#30.
-]
-
 ---
+class: middle, inverse
 
-# Theme examples
-
-- [Mitchell O'Hara-Wild](https://blog.mitchelloharawild.com/)
-
-- [Isabella Velásquez](https://ivelasq.rbind.io/)
-
-- [Cool But Useless](https://coolbutuseless.github.io/)
-
----
-
-# Blogdown resources
+## .fat[.fancy[Blogdown resources]]
 
 - [Blogdown demo site](https://blogdown-demo.rbind.io)
 - [Blogdown book](https://bookdown.org/yihui/blogdown/)
@@ -1568,68 +1046,17 @@ name:workflow
 - [Yihui's slides from RStudio Conf](https://slides.yihui.name/2018-blogdown-rstudio-conf-Yihui-Xie.html)
 
 ---
-template: earlydeploy
+class: middle, inverse
 
-# Update on Netlify
+# 📰 Want to change the landing page?
 
-&lt;img src="img/netlify-manual-update.png" width="863" /&gt;
-
----
-publishing
-
-cloud rstudio server pro very important
-
-
-
-
-
-    Make sure you are in a RStudio project dedicated to the blog.
-    Add relativeURLS=true to config.toml
-    Develop as normal using blogdown::serve_site()
-    When you're ready to deploy, use the Build Pane's Build Website command.
-    Click Publish from the built preview, and select "Publish finished website only"
-
-
----
-name: yourturn-5
-template: yourturn
-
-.right-column[
-# .fancy[05:00 minutes]
-### Deploy!
-
-1. ☁️ | 💻
-  + Use RStudio Connect
-
-1. 💻 + &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;
-  + Add a `.gitignore`
-  + Push your changes to GitHub
-  + On Netlify.com, New Site from Git &gt; pick your repo
-
-]
----
-
-📰
-
-Extra Extra!
-
-Want to change the landing page? You need to do two things:
+You need to do two things:
 
 1. add an `_index.md` file to `content/` (not in a subfolder)
 1. update the `index.html` layout
 
-Let's try it!
-
----
-
-Update your theme if you want:
 
 
-```r
-blogdown::install_theme("gcushen/hugo-academic", 
-                        theme_example = TRUE, 
-*                       update_config = TRUE)
-```
 
 
     </textarea>
