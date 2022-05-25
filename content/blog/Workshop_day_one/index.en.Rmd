@@ -21,14 +21,18 @@ weight: 1
 
 ## Day 1
 
+[Link to slides](https://anneokk.netlify.app/slides/day_one.html#1)  
+
 See the [slides as pdf](/slides/day_one-compressed.pdf) 
 
 ```{r echo = FALSE, include = TRUE}
 knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1') 
 ```
 
-
+ 
 ## Day 2
+
+[Link to slides](https://anneokk.netlify.app/slides/day_two.html#1)  
 
 See the [slides as pdf](/slides/day_two-compressed.pdf)
 
